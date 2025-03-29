@@ -54,17 +54,17 @@ export default {
 					foreground: 'hsl(var(--card-foreground))'
 				},
 				primitive: {
-					50: '#f3f2ff',
-					100: '#e9e6ff',
-					200: '#d4cfff',
-					300: '#b7acff',
-					400: '#967fff',
-					500: '#7c4dff',
-					600: '#7038ff',
-					700: '#5f21ef',
-					800: '#4f1dd0',
-					900: '#411ca7',
-					950: '#25105c',
+					50: '#e6f7ff',
+					100: '#ccefff',
+					200: '#99dfff',
+					300: '#66ceff',
+					400: '#33befd',
+					500: '#1EAEDB',
+					600: '#0d9dcc',
+					700: '#0b83aa',
+					800: '#086988',
+					900: '#065566',
+					950: '#032c33',
 				},
 			},
 			borderRadius: {
@@ -93,6 +93,22 @@ export default {
 					'0%, 100%': { transform: 'translateY(0)' },
 					'50%': { transform: 'translateY(-10px)' },
 				},
+				'slide-in-right': {
+					'0%': { transform: 'translateX(100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'slide-in-left': {
+					'0%': { transform: 'translateX(-100%)', opacity: '0' },
+					'100%': { transform: 'translateX(0)', opacity: '1' }
+				},
+				'scale-in': {
+					'0%': { transform: 'scale(0.9)', opacity: '0' },
+					'100%': { transform: 'scale(1)', opacity: '1' }
+				},
+				'bounce-subtle': {
+					'0%, 100%': { transform: 'translateY(0)' },
+					'50%': { transform: 'translateY(-5px)' }
+				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
@@ -100,6 +116,10 @@ export default {
 				'fade-in': 'fade-in 0.3s ease-out forwards',
 				'fade-out': 'fade-out 0.3s ease-out forwards',
 				'float': 'float 3s ease-in-out infinite',
+				'slide-in-right': 'slide-in-right 0.5s ease-out forwards',
+				'slide-in-left': 'slide-in-left 0.5s ease-out forwards',
+				'scale-in': 'scale-in 0.5s ease-out forwards',
+				'bounce-subtle': 'bounce-subtle 2s ease-in-out infinite'
 			},
 		},
 	},

@@ -3,12 +3,15 @@ import React, { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
 import BlogCard from '@/components/BlogCard';
-import { Link } from 'react-router-dom';
+import { Link, useSearchParams } from 'react-router-dom';
 import { Brain, Camera, MessageCircle, FileText, Search } from 'lucide-react';
 
 const Blog = () => {
+  const [searchParams] = useSearchParams();
+  const categoryParam = searchParams.get('category');
+  
   const allCategories = ['All', 'Workplace Safety', 'Chatbots', 'Legal AI', 'Document Processing', 'AI Trends'];
-  const [activeCategory, setActiveCategory] = useState('All');
+  const [activeCategory, setActiveCategory] = useState(categoryParam || 'All');
   
   const blogPosts = [
     {
@@ -89,10 +92,15 @@ const Blog = () => {
     ? blogPosts 
     : blogPosts.filter(post => post.category === activeCategory);
 
+  // Function to get the correct blog post path based on ID
+  const getBlogPath = (id: string) => {
+    return `/blog/${id}`;
+  };
+
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primitive-900 via-primitive-800 to-primitive-950 text-white py-20">
+      <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-950 text-white py-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="hero-heading mb-6">Blog & Insights</h1>
@@ -124,7 +132,7 @@ const Blog = () => {
                 key={category}
                 onClick={() => setActiveCategory(category)}
                 variant={activeCategory === category ? "default" : "outline"}
-                className={activeCategory === category ? "bg-primitive-600 hover:bg-primitive-700" : ""}
+                className={activeCategory === category ? "bg-primary hover:bg-primary-600 text-black" : ""}
               >
                 {category}
               </Button>
@@ -139,14 +147,14 @@ const Blog = () => {
           <div className="section-container">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center border-b border-gray-200 pb-16">
               <div>
-                <Link to={`/blog/${filteredPosts[0].id}`} className="block relative rounded-xl overflow-hidden shadow-lg">
+                <Link to={getBlogPath(filteredPosts[0].id)} className="block relative rounded-xl overflow-hidden shadow-lg">
                   <img 
                     src={filteredPosts[0].imageUrl} 
                     alt={filteredPosts[0].title} 
                     className="w-full h-80 object-cover"
                   />
                   <div className="absolute top-4 left-4">
-                    <span className="bg-primitive-600 text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <span className="bg-primary text-black px-3 py-1 rounded-full text-sm font-medium">
                       {filteredPosts[0].category}
                     </span>
                   </div>
@@ -157,15 +165,15 @@ const Blog = () => {
                   {filteredPosts[0].publishDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
                 </span>
                 <h2 className="text-3xl font-bold mt-2 mb-4">
-                  <Link to={`/blog/${filteredPosts[0].id}`} className="hover:text-primitive-600 transition-colors">
+                  <Link to={getBlogPath(filteredPosts[0].id)} className="hover:text-primary transition-colors">
                     {filteredPosts[0].title}
                   </Link>
                 </h2>
                 <p className="text-lg text-muted-foreground mb-6">
                   {filteredPosts[0].excerpt}
                 </p>
-                <Button className="bg-primitive-600 hover:bg-primitive-700">
-                  <Link to={`/blog/${filteredPosts[0].id}`}>Read More</Link>
+                <Button className="bg-primary hover:bg-primary-600 text-black font-medium">
+                  <Link to={getBlogPath(filteredPosts[0].id)}>Read More</Link>
                 </Button>
               </div>
             </div>
@@ -206,7 +214,7 @@ const Blog = () => {
       </section>
 
       {/* Newsletter */}
-      <section className="py-16 bg-primitive-50">
+      <section className="py-16 bg-primary-50">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
             <h2 className="section-heading mb-4">Subscribe to Our Newsletter</h2>
@@ -217,9 +225,9 @@ const Blog = () => {
               <input
                 type="email"
                 placeholder="Enter your email address"
-                className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primitive-500 focus:border-primitive-500 outline-none"
+                className="flex-grow px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-primary outline-none"
               />
-              <Button className="bg-primitive-600 hover:bg-primitive-700 py-3">
+              <Button className="bg-primary hover:bg-primary-600 text-black font-medium py-3">
                 Subscribe
               </Button>
             </div>
@@ -238,53 +246,53 @@ const Blog = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-xl border shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-primary-100 text-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Camera className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Workplace Safety</h3>
               <p className="text-muted-foreground mb-4">
                 Articles on AI-powered safety monitoring, compliance, and risk prevention.
               </p>
-              <Button variant="outline" className="border-primitive-600 text-primitive-600 hover:bg-primitive-50">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary-50">
                 <Link to="/blog?category=Workplace Safety">Explore</Link>
               </Button>
             </div>
             
             <div className="bg-white p-8 rounded-xl border shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-primary-100 text-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <MessageCircle className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Conversational AI</h3>
               <p className="text-muted-foreground mb-4">
                 Insights on chatbots, voice assistants, and customer interaction technology.
               </p>
-              <Button variant="outline" className="border-primitive-600 text-primitive-600 hover:bg-primitive-50">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary-50">
                 <Link to="/blog?category=Chatbots">Explore</Link>
               </Button>
             </div>
             
             <div className="bg-white p-8 rounded-xl border shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-primary-100 text-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <FileText className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">Legal Technology</h3>
               <p className="text-muted-foreground mb-4">
                 Content on legal document automation, compliance, and legal operations.
               </p>
-              <Button variant="outline" className="border-primitive-600 text-primitive-600 hover:bg-primitive-50">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary-50">
                 <Link to="/blog?category=Legal AI">Explore</Link>
               </Button>
             </div>
             
             <div className="bg-white p-8 rounded-xl border shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-primary-100 text-primary-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Brain className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-2">AI Trends</h3>
               <p className="text-muted-foreground mb-4">
                 Updates on the latest advancements, research, and applications in AI technology.
               </p>
-              <Button variant="outline" className="border-primitive-600 text-primitive-600 hover:bg-primitive-50">
+              <Button variant="outline" className="border-primary text-primary hover:bg-primary-50">
                 <Link to="/blog?category=AI Trends">Explore</Link>
               </Button>
             </div>

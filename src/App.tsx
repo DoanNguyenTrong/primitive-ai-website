@@ -1,49 +1,63 @@
 
-import { Toaster } from "@/components/ui/toaster";
-import { Toaster as Sonner } from "@/components/ui/sonner";
-import { TooltipProvider } from "@/components/ui/tooltip";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Layout from "@/components/Layout";
-import Index from "./pages/Index";
-import NotFound from "./pages/NotFound";
-import Solutions from "./pages/Solutions";
-import CameraAI from "./pages/solution-details/CameraAI";
-import Chatbot from "./pages/solution-details/Chatbot";
-import LegalHub from "./pages/solution-details/LegalHub";
-import DocumentProcessing from "./pages/solution-details/DocumentProcessing";
-import About from "./pages/About";
-import Blog from "./pages/Blog";
-import WhyChooseUs from "./pages/WhyChooseUs";
-import Contact from "./pages/Contact";
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { Toaster } from '@/components/ui/toaster';
 
-// Create a new QueryClient instance outside of the component
+import Layout from '@/components/Layout';
+import Index from '@/pages/Index';
+import About from '@/pages/About';
+import Solutions from '@/pages/Solutions';
+import Blog from '@/pages/Blog';
+import Contact from '@/pages/Contact';
+import WhyChooseUs from '@/pages/WhyChooseUs';
+import NotFound from '@/pages/NotFound';
+
+// Solution detail pages
+import CameraAI from '@/pages/solution-details/CameraAI';
+import Chatbot from '@/pages/solution-details/Chatbot';
+import LegalHub from '@/pages/solution-details/LegalHub';
+import DocumentProcessing from '@/pages/solution-details/DocumentProcessing';
+
+// Blog post pages
+import BlogPost1 from '@/pages/blog-posts/BlogPost1';
+import BlogPost2 from '@/pages/blog-posts/BlogPost2';
+import BlogPost3 from '@/pages/blog-posts/BlogPost3';
+
+import './App.css';
+
 const queryClient = new QueryClient();
 
-// Define App as a proper function component
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
+      <Router>
+        <Layout>
           <Routes>
-            <Route path="/" element={<Layout><Index /></Layout>} />
-            <Route path="/solutions" element={<Layout><Solutions /></Layout>} />
-            <Route path="/solutions/camera-ai" element={<Layout><CameraAI /></Layout>} />
-            <Route path="/solutions/chatbot" element={<Layout><Chatbot /></Layout>} />
-            <Route path="/solutions/legalhub" element={<Layout><LegalHub /></Layout>} />
-            <Route path="/solutions/document-processing" element={<Layout><DocumentProcessing /></Layout>} />
-            <Route path="/about" element={<Layout><About /></Layout>} />
-            <Route path="/blog" element={<Layout><Blog /></Layout>} />
-            <Route path="/why-choose-us" element={<Layout><WhyChooseUs /></Layout>} />
-            <Route path="/contact" element={<Layout><Contact /></Layout>} />
-            {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
-            <Route path="*" element={<Layout><NotFound /></Layout>} />
+            <Route path="/" element={<Index />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/why-choose-us" element={<WhyChooseUs />} />
+            
+            {/* Solution detail routes */}
+            <Route path="/solutions/camera-ai" element={<CameraAI />} />
+            <Route path="/solutions/chatbot" element={<Chatbot />} />
+            <Route path="/solutions/legalhub" element={<LegalHub />} />
+            <Route path="/solutions/document-processing" element={<DocumentProcessing />} />
+            
+            {/* Blog post routes */}
+            <Route path="/blog/1" element={<BlogPost1 />} />
+            <Route path="/blog/2" element={<BlogPost2 />} />
+            <Route path="/blog/3" element={<BlogPost3 />} />
+            
+            {/* 404 route */}
+            <Route path="*" element={<NotFound />} />
           </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
+        </Layout>
+        <Toaster />
+      </Router>
     </QueryClientProvider>
   );
 }

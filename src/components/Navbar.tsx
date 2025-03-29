@@ -24,6 +24,7 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
+    { name: 'Solutions', path: '/solutions' },
     { name: 'About', path: '/about' },
     { name: 'Blog', path: '/blog' },
     { name: 'Why Choose Us', path: '/why-choose-us' },
@@ -63,7 +64,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primitive-600">Primitive AI</span>
+              <span className="text-2xl font-bold text-primary">Primitive AI</span>
             </Link>
           </div>
           
@@ -71,7 +72,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primitive-600 focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -80,14 +81,14 @@ const Navbar = () => {
           
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Home, About, etc. links */}
-            {navLinks.map((link) => (
+            {/* Regular nav links except Solutions */}
+            {navLinks.filter(link => link.name !== 'Solutions').map((link) => (
               <Link
                 key={link.name}
                 to={link.path}
                 className={cn(
-                  "text-base font-medium hover:text-primitive-600 transition-colors",
-                  isActive(link.path) ? "text-primitive-600 font-semibold" : "text-foreground"
+                  "text-base font-medium hover:text-primary transition-colors",
+                  isActive(link.path) ? "text-primary font-semibold" : "text-foreground"
                 )}
               >
                 {link.name}
@@ -100,23 +101,23 @@ const Navbar = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
                     className={cn(
-                      "text-base font-medium hover:text-primitive-600 transition-colors bg-transparent hover:bg-transparent focus:bg-transparent", 
+                      "text-base font-medium hover:text-primary transition-colors bg-transparent hover:bg-transparent focus:bg-transparent", 
                       (isActive('/solutions') || location.pathname.startsWith('/solutions/')) 
-                        ? "text-primitive-600 font-semibold" 
+                        ? "text-primary font-semibold" 
                         : "text-foreground"
                     )}
                   >
                     Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white">
-                    <div className="grid gap-3 p-6 md:w-[500px] lg:w-[600px] lg:grid-cols-[.75fr_1fr]">
+                    <div className="grid gap-3 p-6 md:w-[500px] lg:w-[600px] lg:grid-cols-[.65fr_1fr]">
                       <div className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-primitive-50 to-primitive-100 p-6 no-underline outline-none focus:shadow-md"
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-primary-50 to-primary-100 p-6 no-underline outline-none focus:shadow-md"
                             to="/solutions"
                           >
-                            <div className="mb-2 mt-4 text-lg font-medium text-primitive-600">
+                            <div className="mb-2 mt-4 text-lg font-medium text-primary-600">
                               All Solutions
                             </div>
                             <p className="text-sm leading-tight text-muted-foreground">
@@ -134,12 +135,12 @@ const Navbar = () => {
                                 className={cn(
                                   "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
                                   isActive(solution.path)
-                                    ? "bg-primitive-100 text-primitive-600"
-                                    : "hover:bg-primitive-50 hover:text-primitive-600"
+                                    ? "bg-primary-100 text-primary-700"
+                                    : "hover:bg-primary-50 hover:text-primary-700"
                                 )}
                               >
                                 <div className="flex items-center gap-2 text-sm font-medium leading-none mb-1">
-                                  <solution.icon className="h-4 w-4 text-primitive-600" />
+                                  <solution.icon className="h-4 w-4 text-primary-600" />
                                   <span>{solution.name}</span>
                                 </div>
                                 <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
@@ -159,7 +160,7 @@ const Navbar = () => {
           
           {/* CTA Button */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <Button className="bg-primitive-600 hover:bg-primitive-700">
+            <Button className="bg-primary hover:bg-primary-600 text-black font-medium">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -176,8 +177,8 @@ const Navbar = () => {
               className={cn(
                 "block px-3 py-2 rounded-md text-base font-medium",
                 isActive(link.path)
-                  ? "bg-primitive-50 text-primitive-600"
-                  : "text-foreground hover:bg-primitive-50 hover:text-primitive-600"
+                  ? "bg-primary-50 text-primary"
+                  : "text-foreground hover:bg-primary-50 hover:text-primary"
               )}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -185,23 +186,9 @@ const Navbar = () => {
             </Link>
           ))}
           
-          {/* Solutions in mobile menu */}
-          <Link
-            to="/solutions"
-            className={cn(
-              "block px-3 py-2 rounded-md text-base font-medium",
-              isActive("/solutions") || location.pathname.startsWith('/solutions/')
-                ? "bg-primitive-50 text-primitive-600"
-                : "text-foreground hover:bg-primitive-50 hover:text-primitive-600"
-            )}
-            onClick={() => setIsMenuOpen(false)}
-          >
-            Solutions
-          </Link>
-          
           {/* Sub-items for solutions in mobile */}
           {location.pathname.startsWith('/solutions') && (
-            <div className="pl-6 space-y-1 border-l border-primitive-100 ml-3">
+            <div className="pl-6 space-y-1 border-l border-primary-100 ml-3">
               {solutionsLinks.map((solution) => (
                 <Link
                   key={solution.path}
@@ -209,8 +196,8 @@ const Navbar = () => {
                   className={cn(
                     "flex items-center px-3 py-2 rounded-md text-sm",
                     isActive(solution.path)
-                      ? "bg-primitive-50 text-primitive-600"
-                      : "text-foreground hover:bg-primitive-50 hover:text-primitive-600"
+                      ? "bg-primary-50 text-primary"
+                      : "text-foreground hover:bg-primary-50 hover:text-primary"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -222,7 +209,7 @@ const Navbar = () => {
           )}
           
           <div className="mt-4 px-3">
-            <Button className="w-full bg-primitive-600 hover:bg-primitive-700">
+            <Button className="w-full bg-primary hover:bg-primary-600 text-black font-medium">
               <Link to="/contact" className="w-full block text-center">
                 Contact Us
               </Link>
