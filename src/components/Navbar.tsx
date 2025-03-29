@@ -3,7 +3,16 @@ import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { cn } from '@/lib/utils';
 import { Button } from '@/components/ui/button';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Camera, MessageCircle, FileText, Brain } from 'lucide-react';
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+  navigationMenuTriggerStyle,
+} from "@/components/ui/navigation-menu";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,10 +24,36 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Solutions', path: '/solutions' },
     { name: 'About', path: '/about' },
     { name: 'Blog', path: '/blog' },
     { name: 'Why Choose Us', path: '/why-choose-us' },
+  ];
+
+  const solutionsLinks = [
+    {
+      name: 'Camera AI Platform',
+      path: '/solutions/camera-ai',
+      description: 'Enhance workplace safety with intelligent visual monitoring',
+      icon: Camera,
+    },
+    {
+      name: 'AI Chatbot & Voice Bot',
+      path: '/solutions/chatbot',
+      description: 'Deliver exceptional customer support and sales assistance',
+      icon: MessageCircle,
+    },
+    {
+      name: 'LegalHub Platform',
+      path: '/solutions/legalhub',
+      description: 'Streamline legal document creation, management, and e-signing',
+      icon: FileText,
+    },
+    {
+      name: 'Intelligent Document Processing',
+      path: '/solutions/document-processing',
+      description: 'Extract, analyze, and process information with high accuracy',
+      icon: Brain,
+    },
   ];
 
   return (
@@ -44,7 +79,8 @@ const Navbar = () => {
           </div>
           
           {/* Desktop navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center space-x-8">
+            {/* Home, About, etc. links */}
             {navLinks.map((link) => (
               <Link
                 key={link.name}
@@ -57,6 +93,68 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            
+            {/* Solutions dropdown */}
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger 
+                    className={cn(
+                      "text-base font-medium hover:text-primitive-600 transition-colors bg-transparent hover:bg-transparent focus:bg-transparent", 
+                      (isActive('/solutions') || location.pathname.startsWith('/solutions/')) 
+                        ? "text-primitive-600 font-semibold" 
+                        : "text-foreground"
+                    )}
+                  >
+                    Solutions
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent className="bg-white">
+                    <div className="grid gap-3 p-6 md:w-[500px] lg:w-[600px] lg:grid-cols-[.75fr_1fr]">
+                      <div className="row-span-3">
+                        <NavigationMenuLink asChild>
+                          <Link
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-primitive-50 to-primitive-100 p-6 no-underline outline-none focus:shadow-md"
+                            to="/solutions"
+                          >
+                            <div className="mb-2 mt-4 text-lg font-medium text-primitive-600">
+                              All Solutions
+                            </div>
+                            <p className="text-sm leading-tight text-muted-foreground">
+                              View our complete suite of AI-powered solutions designed to transform your business
+                            </p>
+                          </Link>
+                        </NavigationMenuLink>
+                      </div>
+                      <ul className="grid gap-3 p-1 md:w-[400px] md:grid-rows-4">
+                        {solutionsLinks.map((solution) => (
+                          <li key={solution.path}>
+                            <NavigationMenuLink asChild>
+                              <Link
+                                to={solution.path}
+                                className={cn(
+                                  "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
+                                  isActive(solution.path)
+                                    ? "bg-primitive-100 text-primitive-600"
+                                    : "hover:bg-primitive-50 hover:text-primitive-600"
+                                )}
+                              >
+                                <div className="flex items-center gap-2 text-sm font-medium leading-none mb-1">
+                                  <solution.icon className="h-4 w-4 text-primitive-600" />
+                                  <span>{solution.name}</span>
+                                </div>
+                                <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                                  {solution.description}
+                                </p>
+                              </Link>
+                            </NavigationMenuLink>
+                          </li>
+                        ))}
+                      </ul>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
           </div>
           
           {/* CTA Button */}
@@ -86,6 +184,43 @@ const Navbar = () => {
               {link.name}
             </Link>
           ))}
+          
+          {/* Solutions in mobile menu */}
+          <Link
+            to="/solutions"
+            className={cn(
+              "block px-3 py-2 rounded-md text-base font-medium",
+              isActive("/solutions") || location.pathname.startsWith('/solutions/')
+                ? "bg-primitive-50 text-primitive-600"
+                : "text-foreground hover:bg-primitive-50 hover:text-primitive-600"
+            )}
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Solutions
+          </Link>
+          
+          {/* Sub-items for solutions in mobile */}
+          {location.pathname.startsWith('/solutions') && (
+            <div className="pl-6 space-y-1 border-l border-primitive-100 ml-3">
+              {solutionsLinks.map((solution) => (
+                <Link
+                  key={solution.path}
+                  to={solution.path}
+                  className={cn(
+                    "flex items-center px-3 py-2 rounded-md text-sm",
+                    isActive(solution.path)
+                      ? "bg-primitive-50 text-primitive-600"
+                      : "text-foreground hover:bg-primitive-50 hover:text-primitive-600"
+                  )}
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  <solution.icon className="h-4 w-4 mr-2" />
+                  {solution.name}
+                </Link>
+              ))}
+            </div>
+          )}
+          
           <div className="mt-4 px-3">
             <Button className="w-full bg-primitive-600 hover:bg-primitive-700">
               <Link to="/contact" className="w-full block text-center">
