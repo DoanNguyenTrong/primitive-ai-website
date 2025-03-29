@@ -1,11 +1,9 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
-import FeatureCard from '@/components/FeatureCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Link } from 'react-router-dom';
-import { Brain, Shield, Clock, BarChart, Users, Briefcase, Code, Headphones } from 'lucide-react';
+import { Award, Check, Clock, Users } from 'lucide-react';
 
 const WhyChooseUs = () => {
   return (
@@ -14,214 +12,82 @@ const WhyChooseUs = () => {
       <section className="bg-gradient-to-br from-primitive-900 via-primitive-800 to-primitive-950 text-white py-20">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
-            <h1 className="hero-heading mb-6">Why Choose Primitive AI</h1>
+            <h1 className="hero-heading mb-6">Why Choose Primitive AI?</h1>
             <p className="text-xl text-gray-300 mb-8">
-              Discover what sets us apart as a leading provider of AI solutions for businesses across industries.
+              We are committed to delivering innovative AI solutions that drive real business value.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Key Advantages */}
+      {/* Key Reasons */}
       <section className="py-20">
         <div className="section-container">
           <SectionHeader
-            title="Our Competitive Advantages"
-            subtitle="We combine cutting-edge AI technology with deep domain expertise to deliver solutions that drive real business value"
+            title="Reasons to Choose Us"
+            subtitle="We provide cutting-edge AI solutions tailored to your business needs"
             centered={true}
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <FeatureCard
-              title="Cutting-Edge LLM Technology"
-              description="We leverage the latest large language models and fine-tune them for specific business applications to deliver superior results."
-              icon={Brain}
-            />
-            <FeatureCard
-              title="Enterprise-Grade Security"
-              description="Our solutions are built with security at the core, ensuring your sensitive data and systems are protected at all times."
-              icon={Shield}
-            />
-            <FeatureCard
-              title="Rapid Implementation"
-              description="Our streamlined implementation process gets you up and running quickly, with minimal disruption to your operations."
-              icon={Clock}
-            />
-            <FeatureCard
-              title="Measurable ROI"
-              description="We focus on delivering solutions that provide tangible business results, with clear metrics to track performance and ROI."
-              icon={BarChart}
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* Industry Expertise */}
-      <section className="py-20 bg-gray-50">
-        <div className="section-container">
-          <SectionHeader
-            title="Industry Expertise"
-            subtitle="Our team brings deep domain knowledge across key industries"
-            centered={true}
-          />
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                <Briefcase className="h-6 w-6" />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Manufacturing</h3>
-              <p className="text-muted-foreground mb-6">
-                We understand the unique challenges of manufacturing environments, from safety compliance to process optimization.
+              <h3 className="text-xl font-semibold mb-4">Innovative Solutions</h3>
+              <p className="text-muted-foreground">
+                We leverage the latest advancements in AI to develop innovative solutions that address your unique challenges.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Safety monitoring expertise</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Experience with robotics integration</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Production process optimization</span>
-                </li>
-              </ul>
             </div>
             
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mb-6">
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Check className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
+              <p className="text-muted-foreground">
+                Our solutions have a proven track record of delivering measurable results, including increased efficiency, reduced costs, and improved customer satisfaction.
+              </p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Clock className="h-6 w-6" />
+              </div>
+              <h3 className="text-xl font-semibold mb-4">Timely Delivery</h3>
+              <p className="text-muted-foreground">
+                We are committed to delivering projects on time and within budget, without compromising on quality.
+              </p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="h-6 w-6" />
               </div>
-              <h3 className="text-xl font-bold mb-4">Legal & Compliance</h3>
-              <p className="text-muted-foreground mb-6">
-                Our legal experts ensure our solutions meet the complex requirements of legal operations and regulatory compliance.
+              <h3 className="text-xl font-semibold mb-4">Expert Team</h3>
+              <p className="text-muted-foreground">
+                Our team of AI experts has extensive experience in developing and deploying AI solutions across various industries.
               </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Legal document automation expertise</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Regulatory compliance knowledge</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>E-signature best practices</span>
-                </li>
-              </ul>
             </div>
-            
-            <div className="bg-white p-8 rounded-xl shadow-sm">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mb-6">
-                <Headphones className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-bold mb-4">Customer Service</h3>
-              <p className="text-muted-foreground mb-6">
-                We build AI solutions that enhance customer experiences while reducing support costs.
-              </p>
-              <ul className="space-y-2">
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Conversational AI expertise</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>CX optimization experience</span>
-                </li>
-                <li className="flex items-start">
-                  <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                  </svg>
-                  <span>Omnichannel support knowledge</span>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* Technology Stack */}
-      <section className="py-20">
-        <div className="section-container">
-          <SectionHeader
-            title="Our Technology Stack"
-            subtitle="We leverage the most advanced AI technologies to build our solutions"
-            centered={true}
-          />
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <div className="space-y-6">
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-bold mb-2 flex items-center">
-                    <Brain className="h-6 w-6 text-primitive-600 mr-2" />
-                    Advanced Large Language Models
-                  </h3>
-                  <p className="text-muted-foreground">
-                    We use state-of-the-art LLMs like GPT-4 and fine-tune them for specific business applications to deliver superior results.
-                  </p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-bold mb-2 flex items-center">
-                    <Code className="h-6 w-6 text-primitive-600 mr-2" />
-                    Custom AI Frameworks
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Our proprietary AI frameworks are optimized for specific use cases, delivering greater accuracy and efficiency than generic solutions.
-                  </p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-bold mb-2 flex items-center">
-                    <Shield className="h-6 w-6 text-primitive-600 mr-2" />
-                    Enterprise Security Architecture
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Our security architecture ensures data protection, privacy compliance, and secure operations at all levels.
-                  </p>
-                </div>
-                
-                <div className="bg-white p-6 rounded-xl shadow-sm">
-                  <h3 className="text-xl font-bold mb-2 flex items-center">
-                    <Briefcase className="h-6 w-6 text-primitive-600 mr-2" />
-                    Enterprise Integration Platform
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Our solutions seamlessly integrate with existing business systems, from ERP and CRM to custom applications.
-                  </p>
-                </div>
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Check className="h-6 w-6" />
               </div>
+              <h3 className="text-xl font-semibold mb-4">Custom Solutions</h3>
+              <p className="text-muted-foreground">
+                We understand that every business is unique. That's why we offer custom AI solutions tailored to your specific needs and goals.
+              </p>
             </div>
-            
-            <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primitive-400 to-primitive-600 rounded-lg blur opacity-75"></div>
-              <div className="relative">
-                <img 
-                  src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?q=80&w=2670&auto=format&fit=crop" 
-                  alt="AI Technology" 
-                  className="rounded-lg shadow-xl w-full"
-                />
+
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Check className="h-6 w-6" />
               </div>
+              <h3 className="text-xl font-semibold mb-4">Ongoing Support</h3>
+              <p className="text-muted-foreground">
+                We provide ongoing support and maintenance to ensure your AI solutions continue to deliver value over time.
+              </p>
             </div>
           </div>
         </div>
@@ -231,99 +97,51 @@ const WhyChooseUs = () => {
       <section className="py-20 bg-gray-50">
         <div className="section-container">
           <SectionHeader
-            title="Client Success Stories"
-            subtitle="Don't just take our word for it. Here's what our clients have to say."
+            title="What Our Clients Say"
+            subtitle="Hear from businesses that have transformed their operations with our AI solutions"
             centered={true}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
-              quote="Primitive AI's Camera AI Platform has completely transformed our workplace safety. The implementation was smooth, and the results were immediate and measurable."
-              author="James Wilson"
-              role="Head of Operations"
-              company="Global Manufacturing Inc."
+              quote="Primitive AI's solutions have helped us automate key processes, reduce costs, and improve customer satisfaction. Their team is highly skilled and responsive."
+              author="John Smith"
+              role="CEO"
+              company="Acme Corp"
               rating={5}
-              avatarUrl="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=2574&auto=format&fit=crop"
             />
             <TestimonialCard
-              quote="The LegalHub Platform reduced our document processing time by 70% and improved accuracy. The team's legal expertise was evident throughout the implementation."
-              author="Sarah Thompson"
-              role="General Counsel"
-              company="Financial Services Group"
-              rating={5}
-              avatarUrl="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=2574&auto=format&fit=crop"
-            />
-            <TestimonialCard
-              quote="We evaluated several AI chatbot vendors, but Primitive AI stood out for their technical expertise and customer-focused approach. The results have exceeded our expectations."
-              author="Michael Rodriguez"
+              quote="We were impressed with Primitive AI's ability to understand our unique business challenges and develop custom AI solutions that delivered real results. Their ongoing support has been invaluable."
+              author="Alice Johnson"
               role="CTO"
-              company="E-Commerce Solutions"
+              company="Beta Inc"
               rating={5}
-              avatarUrl="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=2574&auto=format&fit=crop"
             />
-          </div>
-        </div>
-      </section>
-
-      {/* Awards & Recognition */}
-      <section className="py-20">
-        <div className="section-container">
-          <SectionHeader
-            title="Awards & Recognition"
-            subtitle="Our commitment to excellence has been recognized by industry leaders"
-            centered={true}
-          />
-          
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-8">
-            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-6 w-6" />
-              </div>
-              <h3 className="font-bold mb-2">Best AI Solution</h3>
-              <p className="text-sm text-muted-foreground">Tech Innovation Awards 2023</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-6 w-6" />
-              </div>
-              <h3 className="font-bold mb-2">Top AI Startup</h3>
-              <p className="text-sm text-muted-foreground">Venture Capital Summit 2022</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-6 w-6" />
-              </div>
-              <h3 className="font-bold mb-2">Safety Innovation</h3>
-              <p className="text-sm text-muted-foreground">Manufacturing Excellence 2023</p>
-            </div>
-            
-            <div className="bg-white p-6 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Award className="h-6 w-6" />
-              </div>
-              <h3 className="font-bold mb-2">LegalTech Innovator</h3>
-              <p className="text-sm text-muted-foreground">Legal Technology Awards 2023</p>
-            </div>
+            <TestimonialCard
+              quote="Primitive AI's solutions have transformed our operations, enabling us to make better decisions, improve efficiency, and drive growth. We highly recommend their services."
+              author="Bob Williams"
+              role="VP of Operations"
+              company="Gamma Ltd"
+              rating={5}
+            />
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primitive-900 text-white">
+      <section className="py-20">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="section-heading mb-6">Ready to Transform Your Business?</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn how Primitive AI's solutions can help your organization harness the power of artificial intelligence.
+            <h2 className="section-heading mb-6">Ready to Transform Your Business with AI?</h2>
+            <p className="text-xl text-muted-foreground mb-8">
+              Contact us today to learn how our AI solutions can help you achieve your business goals.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-primitive-800 hover:bg-gray-100">
-                <Link to="/contact">Get Started</Link>
+              <Button className="bg-primitive-600 hover:bg-primitive-700">
+                <Link to="/contact">Contact Us</Link>
               </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white/10">
-                <Link to="/solutions">Explore Solutions</Link>
+              <Button variant="outline" className="border-primitive-600 text-primitive-600 hover:bg-primitive-50">
+                <Link to="/solutions">Explore Our Solutions</Link>
               </Button>
             </div>
           </div>
