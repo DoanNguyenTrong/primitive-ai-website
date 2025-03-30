@@ -81,19 +81,16 @@ const Navbar = () => {
           
           {/* Desktop navigation */}
           <div className="hidden md:flex items-center space-x-8">
-            {/* Regular nav links except Solutions */}
-            {navLinks.filter(link => link.name !== 'Solutions').map((link) => (
-              <Link
-                key={link.name}
-                to={link.path}
-                className={cn(
-                  "text-base font-medium hover:text-primary transition-colors",
-                  isActive(link.path) ? "text-primary font-semibold" : "text-foreground"
-                )}
-              >
-                {link.name}
-              </Link>
-            ))}
+            {/* Home link */}
+            <Link
+              to="/"
+              className={cn(
+                "text-base font-medium hover:text-primary transition-colors",
+                isActive('/') ? "text-primary font-semibold" : "text-foreground"
+              )}
+            >
+              Home
+            </Link>
             
             {/* Solutions dropdown */}
             <NavigationMenu>
@@ -110,8 +107,8 @@ const Navbar = () => {
                     Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white">
-                    <div className="grid gap-3 p-6 md:w-[500px] lg:w-[600px] lg:grid-cols-[.65fr_1fr]">
-                      <div className="row-span-3">
+                    <div className="grid gap-3 p-6 md:w-[500px] lg:w-[600px] lg:grid-cols-2">
+                      <div>
                         <NavigationMenuLink asChild>
                           <Link
                             className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-50 to-blue-100 p-6 no-underline outline-none focus:shadow-md"
@@ -126,7 +123,7 @@ const Navbar = () => {
                           </Link>
                         </NavigationMenuLink>
                       </div>
-                      <ul className="grid gap-3 p-1 md:w-[400px] md:grid-rows-4">
+                      <ul className="grid gap-3 p-1 md:w-[400px] grid-rows-4">
                         {solutionsLinks.map((solution) => (
                           <li key={solution.path}>
                             <NavigationMenuLink asChild>
@@ -156,11 +153,25 @@ const Navbar = () => {
                 </NavigationMenuItem>
               </NavigationMenuList>
             </NavigationMenu>
+            
+            {/* Regular nav links except Home and Solutions */}
+            {navLinks.filter(link => link.name !== 'Home' && link.name !== 'Solutions').map((link) => (
+              <Link
+                key={link.name}
+                to={link.path}
+                className={cn(
+                  "text-base font-medium hover:text-primary transition-colors",
+                  isActive(link.path) ? "text-primary font-semibold" : "text-foreground"
+                )}
+              >
+                {link.name}
+              </Link>
+            ))}
           </div>
           
           {/* CTA Button */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-md">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -209,7 +220,7 @@ const Navbar = () => {
           )}
           
           <div className="mt-4 px-3">
-            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium">
+            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-md">
               <Link to="/contact" className="w-full block text-center">
                 Contact Us
               </Link>
