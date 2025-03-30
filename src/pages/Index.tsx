@@ -35,18 +35,18 @@ const Index = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primary-900 via-primary-800 to-primary-950 text-white py-20 md:py-32 overflow-hidden">
+      <section className="bg-gradient-to-br from-purple-800 via-purple-700 to-purple-900 text-white py-20 md:py-32 overflow-hidden">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
               <h1 className="hero-heading animate-fade-in">
-                Transform Your Business with <span className="bg-gradient-to-r from-primary-300 to-primary-100 bg-clip-text text-transparent">Advanced AI</span> Solutions
+                Transform Your Business with <span className="bg-gradient-to-r from-purple-300 to-purple-100 bg-clip-text text-transparent">Advanced AI</span> Solutions
               </h1>
               <p className="text-xl text-gray-300 animate-fade-in" style={{animationDelay: '100ms'}}>
                 Primitive AI delivers cutting-edge AI solutions for workplace safety, customer support, legal operations, and document processing.
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: '200ms'}}>
-                <Button className="bg-white text-primary-800 hover:bg-gray-100 text-lg px-8 py-6 animate-bounce-subtle">
+                <Button className="bg-white text-purple-800 hover:bg-gray-100 text-lg px-8 py-6 animate-bounce-subtle">
                   <Link to="/solutions">Explore Solutions</Link>
                 </Button>
                 <Button variant="outline" className="text-white border-white hover:bg-white/10 text-lg px-8 py-6">
@@ -55,8 +55,8 @@ const Index = () => {
               </div>
             </div>
             <div className="relative animate-float">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primary-400 to-primary-600 rounded-lg blur opacity-75"></div>
-              <div className="relative bg-primary-950 rounded-lg p-6">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
+              <div className="relative bg-purple-950 rounded-lg p-6">
                 <img 
                   src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?q=80&w=2678&auto=format&fit=crop" 
                   alt="AI Technology" 
@@ -109,7 +109,7 @@ const Index = () => {
           </div>
           
           <div className="mt-12 text-center animate-on-scroll opacity-0">
-            <Button className="bg-primary hover:bg-primary-600 text-black font-medium group transition-all duration-300">
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white font-medium group transition-all duration-300">
               <Link to="/solutions" className="flex items-center">
                 View All Solutions
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -160,7 +160,7 @@ const Index = () => {
           </div>
           
           <div className="mt-12 text-center animate-on-scroll opacity-0">
-            <Button className="bg-primary hover:bg-primary-600 text-black font-medium group transition-all duration-300">
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white font-medium group transition-all duration-300">
               <Link to="/why-choose-us" className="flex items-center">
                 Learn More
                 <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
@@ -212,7 +212,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primary-900 text-white">
+      <section className="py-20 bg-purple-900 text-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto animate-on-scroll opacity-0">
             <h2 className="section-heading mb-6">Ready to Transform Your Business?</h2>
@@ -220,7 +220,7 @@ const Index = () => {
               Contact us today to learn how Primitive AI can help your organization harness the power of artificial intelligence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-primary-800 hover:bg-gray-100 text-lg px-8 py-6 animate-bounce-subtle">
+              <Button className="bg-white text-purple-800 hover:bg-gray-100 text-lg px-8 py-6 animate-bounce-subtle">
                 <Link to="/contact">Get Started</Link>
               </Button>
               <Button variant="outline" className="text-white border-white hover:bg-white/10 text-lg px-8 py-6">

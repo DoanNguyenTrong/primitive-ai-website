@@ -14,24 +14,24 @@
     --popover: 0 0% 100%;
     --popover-foreground: 217 100% 15%;
 
-    --primary: 214 100% 50%;
+    --primary: 260 80% 74%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 100% 95%;
-    --secondary-foreground: 217 100% 25%;
+    --secondary: 260 40% 96%;
+    --secondary-foreground: 260 30% 30%;
 
-    --muted: 217 20% 95%;
-    --muted-foreground: 217 10% 40%;
+    --muted: 260 20% 95%;
+    --muted-foreground: 260 10% 40%;
 
-    --accent: 217 100% 95%;
-    --accent-foreground: 217 100% 25%;
+    --accent: 260 40% 96%;
+    --accent-foreground: 260 30% 30%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 217 20% 90%;
-    --input: 217 20% 90%;
-    --ring: 214 100% 50%;
+    --border: 260 20% 90%;
+    --input: 260 20% 90%;
+    --ring: 260 80% 74%;
 
     --radius: 0.5rem;
   }
@@ -70,11 +70,11 @@
   }
   
   .gradient-text {
-    @apply bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-purple-600 to-purple-400 bg-clip-text text-transparent;
   }
   
   .btn-primary {
-    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-md;
+    @apply bg-purple-600 hover:bg-purple-700 text-white font-medium py-2 px-6 rounded-lg transition-colors shadow-md;
   }
   
   .btn-secondary {
