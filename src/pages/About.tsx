@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -74,7 +73,7 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primitive-900 via-primitive-800 to-primitive-950 text-white py-20">
+      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -83,7 +82,7 @@ const About = () => {
                 We're on a mission to transform businesses through innovative AI solutions that solve real-world problems.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-white text-primitive-800 hover:bg-gray-100">
+                <Button className="bg-white text-purple-800 hover:bg-gray-100">
                   <Link to="/contact">Get in Touch</Link>
                 </Button>
                 <Button variant="outline" className="text-white border-white hover:bg-white/10">
@@ -92,7 +91,7 @@ const About = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primitive-400 to-primitive-600 rounded-lg blur opacity-75"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
               <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop" 
@@ -116,13 +115,13 @@ const About = () => {
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6 text-gray-700">
                 Primitive AI was founded in 2018 by Sarah Chen and David Rodriguez, two AI researchers who saw the potential for artificial intelligence to transform businesses across industries. What began as a small startup focused on intelligent document processing has grown into a comprehensive AI solutions provider serving clients worldwide.
               </p>
-              <p className="text-lg mb-6">
+              <p className="text-lg mb-6 text-gray-700">
                 Our journey began with a simple belief: that advanced AI technology should be accessible to businesses of all sizes. We've since expanded our offerings to include solutions for workplace safety, customer support, legal operations, and document processing—all powered by cutting-edge large language models.
               </p>
-              <p className="text-lg">
+              <p className="text-lg text-gray-700">
                 Today, Primitive AI employs over 150 AI specialists, engineers, and industry experts dedicated to developing innovative solutions that drive real business value. Our commitment to excellence, continuous innovation, and customer success remains at the core of everything we do.
               </p>
             </div>
@@ -150,41 +149,41 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Users className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Customer First</h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 We prioritize customer success and build solutions that address real business challenges with measurable results.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Award className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Excellence</h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 We strive for excellence in everything we do, from cutting-edge AI research to customer support and implementation.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <Briefcase className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Innovation</h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 We continuously innovate and push the boundaries of what's possible with AI to deliver transformative solutions.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
                 <GraduationCap className="h-8 w-8" />
               </div>
               <h3 className="text-xl font-bold mb-4">Responsibility</h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 We develop and deploy AI responsibly, with a focus on ethics, security, and positive societal impact.
               </p>
             </div>
@@ -203,18 +202,18 @@ const About = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {teamMembers.map((member, index) => (
-              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm">
+              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
                 <div className="h-64 overflow-hidden">
                   <img 
                     src={member.image} 
                     alt={member.name} 
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
                   />
                 </div>
                 <div className="p-6">
                   <h3 className="text-xl font-bold mb-1">{member.name}</h3>
-                  <p className="text-primitive-600 font-medium mb-4">{member.role}</p>
-                  <p className="text-muted-foreground">{member.bio}</p>
+                  <p className="text-purple-600 font-medium mb-4">{member.role}</p>
+                  <p className="text-gray-600">{member.bio}</p>
                 </div>
               </div>
             ))}
@@ -223,7 +222,7 @@ const About = () => {
       </section>
 
       {/* Company Milestones */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-white">
         <div className="section-container">
           <SectionHeader
             title="Our Journey"
@@ -231,24 +230,24 @@ const About = () => {
             centered={true}
           />
           
-          <div className="relative">
+          <div className="relative mt-16">
             {/* Vertical line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-0.5 bg-primitive-200"></div>
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-purple-300"></div>
             
-            <div className="space-y-12">
+            <div className="space-y-16">
               {milestones.map((milestone, index) => (
                 <div key={index} className="relative">
                   <div className="flex items-center justify-center">
-                    <div className="bg-primitive-600 text-white text-center py-2 px-6 rounded-full font-bold z-10">
+                    <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white text-center py-3 px-8 rounded-full font-bold z-10 shadow-md hover:shadow-lg transition-shadow duration-300">
                       {milestone.year}
                     </div>
                   </div>
                   
-                  <div className={`mt-4 grid grid-cols-1 md:grid-cols-2 gap-8 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                  <div className={`mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
                     <div className={index % 2 === 0 ? 'md:order-1' : 'md:order-2'}>
-                      <div className="bg-white p-6 rounded-xl shadow-sm">
-                        <h3 className="text-xl font-bold mb-2">{milestone.title}</h3>
-                        <p className="text-muted-foreground">{milestone.description}</p>
+                      <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-purple-500">
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">{milestone.title}</h3>
+                        <p className="text-gray-600">{milestone.description}</p>
                       </div>
                     </div>
                     <div className={index % 2 === 0 ? 'md:order-2' : 'md:order-1'}></div>
@@ -261,7 +260,7 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primitive-900 text-white">
+      <section className="py-20 bg-purple-900 text-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Join Us on Our Mission</h2>
@@ -269,7 +268,7 @@ const About = () => {
               We're always looking for talented individuals who share our passion for AI and our commitment to excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-primitive-800 hover:bg-gray-100">
+              <Button className="bg-white text-purple-800 hover:bg-gray-100">
                 <Link to="/contact">Contact Us</Link>
               </Button>
               <Button variant="outline" className="text-white border-white hover:bg-white/10">
