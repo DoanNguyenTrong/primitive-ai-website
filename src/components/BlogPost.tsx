@@ -28,13 +28,13 @@ const BlogPost = ({
       <div className="mb-8">
         <Link 
           to="/blog" 
-          className="flex items-center text-primary hover:text-primary-600 transition-colors mb-4"
+          className="flex items-center text-blue-600 hover:text-blue-700 transition-colors mb-4"
         >
           <ChevronLeft className="h-4 w-4 mr-1" />
           Back to Blog
         </Link>
         
-        <h1 className="text-4xl md:text-5xl font-bold mb-6">{title}</h1>
+        <h1 className="text-4xl md:text-5xl font-bold mb-6 text-left">{title}</h1>
         
         <div className="flex flex-wrap gap-4 items-center text-sm text-muted-foreground mb-8">
           <div className="flex items-center">
@@ -57,7 +57,7 @@ const BlogPost = ({
             <Tag className="h-4 w-4 mr-1" />
             <Link 
               to={`/blog?category=${category}`} 
-              className="text-primary hover:text-primary-600 transition-colors"
+              className="text-blue-600 hover:text-blue-700 transition-colors"
             >
               {category}
             </Link>
@@ -73,7 +73,7 @@ const BlogPost = ({
         />
       </div>
       
-      <div className="prose prose-lg max-w-none">
+      <div className="prose prose-lg max-w-none text-left">
         {content}
       </div>
       
@@ -100,7 +100,7 @@ const BlogPost = ({
             </div>
           </div>
           
-          <Button className="bg-primary hover:bg-primary-600 text-black font-medium">
+          <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium">
             <Link to="/contact">Contact Us</Link>
           </Button>
         </div>

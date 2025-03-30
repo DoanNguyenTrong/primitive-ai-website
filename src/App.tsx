@@ -12,6 +12,8 @@ import Blog from '@/pages/Blog';
 import Contact from '@/pages/Contact';
 import WhyChooseUs from '@/pages/WhyChooseUs';
 import NotFound from '@/pages/NotFound';
+import Privacy from '@/pages/Privacy';
+import Terms from '@/pages/Terms';
 
 // Solution detail pages
 import CameraAI from '@/pages/solution-details/CameraAI';
@@ -40,6 +42,8 @@ function App() {
             <Route path="/blog" element={<Blog />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/why-choose-us" element={<WhyChooseUs />} />
+            <Route path="/privacy" element={<Privacy />} />
+            <Route path="/terms" element={<Terms />} />
             
             {/* Solution detail routes */}
             <Route path="/solutions/camera-ai" element={<CameraAI />} />

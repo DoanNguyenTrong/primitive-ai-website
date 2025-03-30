@@ -25,9 +25,9 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Solutions', path: '/solutions' },
-    { name: 'About', path: '/about' },
-    { name: 'Blog', path: '/blog' },
     { name: 'Why Choose Us', path: '/why-choose-us' },
+    { name: 'Blog', path: '/blog' },
+    { name: 'About', path: '/about' },
   ];
 
   const solutionsLinks = [
@@ -114,10 +114,10 @@ const Navbar = () => {
                       <div className="row-span-3">
                         <NavigationMenuLink asChild>
                           <Link
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-primary-50 to-primary-100 p-6 no-underline outline-none focus:shadow-md"
+                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-50 to-blue-100 p-6 no-underline outline-none focus:shadow-md"
                             to="/solutions"
                           >
-                            <div className="mb-2 mt-4 text-lg font-medium text-primary-600">
+                            <div className="mb-2 mt-4 text-lg font-medium text-blue-600">
                               All Solutions
                             </div>
                             <p className="text-sm leading-tight text-muted-foreground">
@@ -135,12 +135,12 @@ const Navbar = () => {
                                 className={cn(
                                   "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
                                   isActive(solution.path)
-                                    ? "bg-primary-100 text-primary-700"
-                                    : "hover:bg-primary-50 hover:text-primary-700"
+                                    ? "bg-blue-100 text-blue-700"
+                                    : "hover:bg-blue-50 hover:text-blue-700"
                                 )}
                               >
                                 <div className="flex items-center gap-2 text-sm font-medium leading-none mb-1">
-                                  <solution.icon className="h-4 w-4 text-primary-600" />
+                                  <solution.icon className="h-4 w-4 text-blue-600" />
                                   <span>{solution.name}</span>
                                 </div>
                                 <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
@@ -160,7 +160,7 @@ const Navbar = () => {
           
           {/* CTA Button */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <Button className="bg-primary hover:bg-primary-600 text-black font-medium">
+            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -177,8 +177,8 @@ const Navbar = () => {
               className={cn(
                 "block px-3 py-2 rounded-md text-base font-medium",
                 isActive(link.path)
-                  ? "bg-primary-50 text-primary"
-                  : "text-foreground hover:bg-primary-50 hover:text-primary"
+                  ? "bg-blue-50 text-primary"
+                  : "text-foreground hover:bg-blue-50 hover:text-primary"
               )}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -188,7 +188,7 @@ const Navbar = () => {
           
           {/* Sub-items for solutions in mobile */}
           {location.pathname.startsWith('/solutions') && (
-            <div className="pl-6 space-y-1 border-l border-primary-100 ml-3">
+            <div className="pl-6 space-y-1 border-l border-blue-100 ml-3">
               {solutionsLinks.map((solution) => (
                 <Link
                   key={solution.path}
@@ -196,8 +196,8 @@ const Navbar = () => {
                   className={cn(
                     "flex items-center px-3 py-2 rounded-md text-sm",
                     isActive(solution.path)
-                      ? "bg-primary-50 text-primary"
-                      : "text-foreground hover:bg-primary-50 hover:text-primary"
+                      ? "bg-blue-50 text-primary"
+                      : "text-foreground hover:bg-blue-50 hover:text-primary"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -209,7 +209,7 @@ const Navbar = () => {
           )}
           
           <div className="mt-4 px-3">
-            <Button className="w-full bg-primary hover:bg-primary-600 text-black font-medium">
+            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium">
               <Link to="/contact" className="w-full block text-center">
                 Contact Us
               </Link>
