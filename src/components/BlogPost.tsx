@@ -101,7 +101,7 @@ const BlogPost = ({
             </div>
           </div>
           
-          <Button variant="blue" className="shadow-md">
+          <Button variant="purple" className="shadow-md">
             <Link to="/contact">Contact Us</Link>
           </Button>
         </div>
