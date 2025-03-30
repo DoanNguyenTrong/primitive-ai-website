@@ -12,16 +12,16 @@ const CameraAI = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primitive-900 via-primitive-800 to-primitive-950 text-white py-20">
+      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="hero-heading mb-6">Camera AI Platform for Workplace Safety</h1>
-              <p className="text-xl text-gray-300 mb-8">
+              <p className="text-xl text-white mb-8">
                 Enhance workplace safety with intelligent visual monitoring that ensures compliance, prevents accidents, and protects your workforce.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-white text-primitive-800 hover:bg-gray-100">
+                <Button className="bg-white text-purple-800 hover:bg-gray-100">
                   <Link to="/contact">Request Demo</Link>
                 </Button>
                 <Button variant="outline" className="text-white border-white hover:bg-white/10">
@@ -30,10 +30,10 @@ const CameraAI = () => {
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primitive-400 to-primitive-600 rounded-lg blur opacity-75"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1563203369-26f2e4a5ccb7?q=80&w=2670&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop" 
                   alt="Camera AI for Workplace Safety" 
                   className="rounded-lg shadow-xl w-full"
                 />
@@ -98,31 +98,31 @@ const CameraAI = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Installation & Setup</h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-700">
                 Our team integrates AI-powered cameras with your existing security infrastructure or installs new hardware as needed.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-xl font-bold">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">AI Configuration</h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-700">
                 We configure the system to monitor specific safety parameters based on your workplace requirements and industry regulations.
               </p>
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-xl font-bold">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Continuous Monitoring</h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-700">
                 The system continuously monitors operations, providing real-time alerts and generating insights to improve workplace safety.
               </p>
             </div>
@@ -142,30 +142,30 @@ const CameraAI = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
             <div className="border rounded-xl overflow-hidden shadow-sm">
               <img 
-                src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?q=80&w=2670&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?q=80&w=2670&auto=format&fit=crop" 
                 alt="Manufacturing" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Manufacturing</h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-gray-700 mb-4">
                   Ensure worker safety in environments with heavy machinery, robots, and automated systems. Monitor PPE compliance and prevent unauthorized access to restricted areas.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-purple-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Robot-human interaction safety</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-purple-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>PPE compliance monitoring</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-purple-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Restricted area access control</span>
@@ -176,30 +176,30 @@ const CameraAI = () => {
             
             <div className="border rounded-xl overflow-hidden shadow-sm">
               <img 
-                src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2670&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1531297484001-80022131f5a1?q=80&w=2670&auto=format&fit=crop" 
                 alt="Construction" 
                 className="w-full h-48 object-cover"
               />
               <div className="p-6">
                 <h3 className="text-xl font-semibold mb-2">Construction</h3>
-                <p className="text-muted-foreground mb-4">
+                <p className="text-gray-700 mb-4">
                   Monitor construction sites for safety compliance, PPE usage, and unauthorized personnel. Detect potential hazards before they lead to accidents.
                 </p>
                 <ul className="space-y-2">
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-purple-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Safety gear compliance</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-purple-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Hazard zone monitoring</span>
                   </li>
                   <li className="flex items-start">
-                    <svg className="h-5 w-5 text-primitive-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <svg className="h-5 w-5 text-purple-600 mr-2 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                     <span>Worker check-in/check-out</span>
@@ -301,10 +301,10 @@ const CameraAI = () => {
           </div>
           
           <div className="mt-12 text-center">
-            <p className="text-muted-foreground mb-4">
+            <p className="text-gray-700 mb-4">
               All plans include hardware installation, configuration, and training.
             </p>
-            <Button className="bg-primitive-600 hover:bg-primitive-700">
+            <Button className="bg-purple-600 hover:bg-purple-700">
               <Link to="/contact">Contact Us for Custom Pricing</Link>
             </Button>
           </div>
@@ -312,15 +312,15 @@ const CameraAI = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primitive-900 text-white">
+      <section className="py-20 bg-purple-900 text-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Ready to Enhance Workplace Safety?</h2>
-            <p className="text-xl text-gray-300 mb-8">
+            <p className="text-xl text-white mb-8">
               Contact us today to schedule a demo and learn how our Camera AI Platform can transform safety at your workplace.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-primitive-800 hover:bg-gray-100">
+              <Button className="bg-white text-purple-800 hover:bg-gray-100">
                 <Link to="/contact">Request Demo</Link>
               </Button>
               <Button variant="outline" className="text-white border-white hover:bg-white/10">

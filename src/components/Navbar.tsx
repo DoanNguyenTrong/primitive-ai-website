@@ -64,7 +64,7 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-primary">Primitive AI</span>
+              <span className="text-2xl font-bold text-purple-600">Primitive AI</span>
             </Link>
           </div>
           
@@ -72,7 +72,7 @@ const Navbar = () => {
           <div className="md:hidden flex items-center">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-primary focus:outline-none"
+              className="inline-flex items-center justify-center p-2 rounded-md text-foreground hover:text-purple-600 focus:outline-none"
             >
               <span className="sr-only">Open main menu</span>
               {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
@@ -85,8 +85,8 @@ const Navbar = () => {
             <Link
               to="/"
               className={cn(
-                "text-base font-medium hover:text-primary transition-colors",
-                isActive('/') ? "text-primary font-semibold" : "text-foreground"
+                "text-base font-medium hover:text-purple-600 transition-colors",
+                isActive('/') ? "text-purple-600 font-semibold" : "text-foreground"
               )}
             >
               Home
@@ -98,32 +98,32 @@ const Navbar = () => {
                 <NavigationMenuItem>
                   <NavigationMenuTrigger 
                     className={cn(
-                      "text-base font-medium hover:text-primary transition-colors bg-transparent hover:bg-transparent focus:bg-transparent", 
+                      "text-base font-medium hover:text-purple-600 transition-colors bg-transparent hover:bg-transparent focus:bg-transparent", 
                       (isActive('/solutions') || location.pathname.startsWith('/solutions/')) 
-                        ? "text-primary font-semibold" 
+                        ? "text-purple-600 font-semibold" 
                         : "text-foreground"
                     )}
                   >
                     Solutions
                   </NavigationMenuTrigger>
                   <NavigationMenuContent className="bg-white">
-                    <div className="grid gap-3 p-6 md:w-[500px] lg:w-[600px] lg:grid-cols-2">
-                      <div>
+                    <div className="grid gap-3 p-6 md:w-[600px] lg:w-[700px] grid-cols-[200px_1fr]">
+                      <div className="flex items-center">
                         <NavigationMenuLink asChild>
                           <Link
-                            className="flex h-full w-full select-none flex-col justify-end rounded-md bg-gradient-to-b from-blue-50 to-blue-100 p-6 no-underline outline-none focus:shadow-md"
+                            className="flex h-full w-full select-none flex-col justify-center rounded-md bg-gradient-to-b from-purple-50 to-purple-100 p-6 no-underline outline-none focus:shadow-md"
                             to="/solutions"
                           >
-                            <div className="mb-2 mt-4 text-lg font-medium text-blue-600">
+                            <div className="mb-2 mt-4 text-lg font-medium text-purple-600">
                               All Solutions
                             </div>
-                            <p className="text-sm leading-tight text-muted-foreground">
+                            <p className="text-sm leading-tight text-purple-600">
                               View our complete suite of AI-powered solutions designed to transform your business
                             </p>
                           </Link>
                         </NavigationMenuLink>
                       </div>
-                      <ul className="grid gap-3 p-1 md:w-[400px] grid-rows-4">
+                      <ul className="grid gap-3 p-1 md:w-full grid-rows-4">
                         {solutionsLinks.map((solution) => (
                           <li key={solution.path}>
                             <NavigationMenuLink asChild>
@@ -132,15 +132,15 @@ const Navbar = () => {
                                 className={cn(
                                   "block select-none rounded-md p-3 leading-none no-underline outline-none transition-colors",
                                   isActive(solution.path)
-                                    ? "bg-blue-100 text-blue-700"
-                                    : "hover:bg-blue-50 hover:text-blue-700"
+                                    ? "bg-purple-100 text-purple-700"
+                                    : "hover:bg-purple-50 hover:text-purple-700"
                                 )}
                               >
                                 <div className="flex items-center gap-2 text-sm font-medium leading-none mb-1">
-                                  <solution.icon className="h-4 w-4 text-blue-600" />
+                                  <solution.icon className="h-4 w-4 text-purple-600" />
                                   <span>{solution.name}</span>
                                 </div>
-                                <p className="line-clamp-2 text-xs leading-snug text-muted-foreground">
+                                <p className="line-clamp-2 text-xs leading-snug text-purple-600">
                                   {solution.description}
                                 </p>
                               </Link>
@@ -160,8 +160,8 @@ const Navbar = () => {
                 key={link.name}
                 to={link.path}
                 className={cn(
-                  "text-base font-medium hover:text-primary transition-colors",
-                  isActive(link.path) ? "text-primary font-semibold" : "text-foreground"
+                  "text-base font-medium hover:text-purple-600 transition-colors",
+                  isActive(link.path) ? "text-purple-600 font-semibold" : "text-foreground"
                 )}
               >
                 {link.name}
@@ -171,7 +171,7 @@ const Navbar = () => {
           
           {/* CTA Button */}
           <div className="hidden md:flex items-center justify-end md:flex-1 lg:w-0">
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-md">
+            <Button className="bg-purple-600 hover:bg-purple-700 text-white font-medium shadow-md">
               <Link to="/contact">Contact Us</Link>
             </Button>
           </div>
@@ -188,8 +188,8 @@ const Navbar = () => {
               className={cn(
                 "block px-3 py-2 rounded-md text-base font-medium",
                 isActive(link.path)
-                  ? "bg-blue-50 text-primary"
-                  : "text-foreground hover:bg-blue-50 hover:text-primary"
+                  ? "bg-purple-50 text-purple-600"
+                  : "text-foreground hover:bg-purple-50 hover:text-purple-600"
               )}
               onClick={() => setIsMenuOpen(false)}
             >
@@ -199,7 +199,7 @@ const Navbar = () => {
           
           {/* Sub-items for solutions in mobile */}
           {location.pathname.startsWith('/solutions') && (
-            <div className="pl-6 space-y-1 border-l border-blue-100 ml-3">
+            <div className="pl-6 space-y-1 border-l border-purple-100 ml-3">
               {solutionsLinks.map((solution) => (
                 <Link
                   key={solution.path}
@@ -207,8 +207,8 @@ const Navbar = () => {
                   className={cn(
                     "flex items-center px-3 py-2 rounded-md text-sm",
                     isActive(solution.path)
-                      ? "bg-blue-50 text-primary"
-                      : "text-foreground hover:bg-blue-50 hover:text-primary"
+                      ? "bg-purple-50 text-purple-600"
+                      : "text-foreground hover:bg-purple-50 hover:text-purple-600"
                   )}
                   onClick={() => setIsMenuOpen(false)}
                 >
@@ -220,7 +220,7 @@ const Navbar = () => {
           )}
           
           <div className="mt-4 px-3">
-            <Button className="w-full bg-blue-600 hover:bg-blue-700 text-white font-medium shadow-md">
+            <Button className="w-full bg-purple-600 hover:bg-purple-700 text-white font-medium shadow-md">
               <Link to="/contact" className="w-full block text-center">
                 Contact Us
               </Link>
