@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -9,7 +10,7 @@ const WhyChooseUs = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primitive-900 via-primitive-800 to-primitive-950 text-white py-20">
+      <section className="hook-section">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="hero-heading mb-6">Why Choose Primitive AI?</h1>

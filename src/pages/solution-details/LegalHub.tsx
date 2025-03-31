@@ -12,7 +12,7 @@ const LegalHub = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-primitive-900 via-primitive-800 to-primitive-950 text-white py-20">
+      <section className="hook-section">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -21,16 +21,16 @@ const LegalHub = () => {
                 Streamline legal document creation, management, and e-signing with our powerful AI-driven platform designed for legal professionals.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-white text-primitive-800 hover:bg-gray-100">
+                <Button className="bg-white text-purple-800 hover:bg-gray-100">
                   <Link to="/contact">Request Demo</Link>
                 </Button>
-                <Button variant="outline" className="text-white border-white hover:bg-white/10">
+                <Button variant="outline" className="border-white text-purple-300 hover:bg-white/10 hover:text-white">
                   <Link to="#pricing">View Pricing</Link>
                 </Button>
               </div>
             </div>
             <div className="relative">
-              <div className="absolute -inset-0.5 bg-gradient-to-r from-primitive-400 to-primitive-600 rounded-lg blur opacity-75"></div>
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
               <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2670&auto=format&fit=crop" 
@@ -322,7 +322,7 @@ const LegalHub = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-primitive-900 text-white">
+      <section className="py-20 hook-section">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Ready to Transform Your Legal Operations?</h2>
@@ -330,10 +330,10 @@ const LegalHub = () => {
               Contact us today to schedule a demo and learn how our LegalHub Platform can streamline your legal document processes.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-primitive-800 hover:bg-gray-100">
+              <Button className="bg-white text-purple-800 hover:bg-gray-100">
                 <Link to="/contact">Request Demo</Link>
               </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white/10">
+              <Button variant="outline" className="border-white text-purple-300 hover:bg-white/10 hover:text-white">
                 <Link to="/solutions">Explore Other Solutions</Link>
               </Button>
             </div>
