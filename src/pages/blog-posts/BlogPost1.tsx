@@ -9,7 +9,7 @@ const BlogPost1 = () => {
         <BlogPost
           id="1"
           title="How AI is Transforming Workplace Safety Monitoring"
-          imageUrl="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?q=80&w=2670&auto=format&fit=crop"
+          imageUrl="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?q=80&w=2670&auto=format&fit=crop"
           publishDate={new Date('2024-06-01')}
           author="Dr. James Wilson"
           category="Workplace Safety"

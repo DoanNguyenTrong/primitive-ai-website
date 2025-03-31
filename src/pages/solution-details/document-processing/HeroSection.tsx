@@ -17,7 +17,7 @@ const HeroSection = () => {
               <Button className="bg-white text-purple-800 hover:bg-gray-100">
                 <Link to="/contact">Request Demo</Link>
               </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white/10">
+              <Button variant="outline" className="text-purple-300 border-white hover:bg-white/10">
                 <Link to="#pricing">View Pricing</Link>
               </Button>
             </div>
@@ -26,7 +26,7 @@ const HeroSection = () => {
             <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
             <div className="relative">
               <img 
-                src="https://images.unsplash.com/photo-1613044992830-873aaffec5ea?q=80&w=2670&auto=format&fit=crop" 
+                src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?q=80&w=2670&auto=format&fit=crop" 
                 alt="Intelligent Document Processing" 
                 className="rounded-lg shadow-xl w-full"
               />

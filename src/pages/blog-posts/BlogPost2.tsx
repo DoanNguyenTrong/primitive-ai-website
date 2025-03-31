@@ -9,7 +9,7 @@ const BlogPost2 = () => {
         <BlogPost
           id="2"
           title="The Evolution of Conversational AI in Customer Support"
-          imageUrl="https://images.unsplash.com/photo-1586880244406-8b640a5c0c7d?q=80&w=2574&auto=format&fit=crop"
+          imageUrl="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2670&auto=format&fit=crop"
           publishDate={new Date('2024-05-24')}
           author="Emily Rodriguez"
           category="Chatbots"
