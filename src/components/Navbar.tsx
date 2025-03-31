@@ -38,9 +38,9 @@ const Navbar = () => {
       icon: Camera,
     },
     {
-      name: 'AI Chatbot & Voice Bot',
+      name: 'SupportHub: AI Chatbot & Voice Bot',
       path: '/solutions/chatbot',
-      description: 'Deliver exceptional customer support and sales assistance',
+      description: 'Deliver exceptional customer support with a fully customizable platform',
       icon: MessageCircle,
     },
     {

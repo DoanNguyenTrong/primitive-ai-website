@@ -25,14 +25,15 @@ const Solutions = () => {
     },
     {
       id: 'chatbot',
-      title: 'AI Chatbot & Voice Bot',
-      subtitle: 'Deliver exceptional customer support and sales assistance',
-      description: 'Powered by advanced LLMs, our conversational AI solutions provide natural, helpful interactions across text and voice channels to enhance customer support, drive sales, and improve user experience.',
+      title: 'SupportHub: AI Chatbot & Voice Bot',
+      subtitle: 'Deliver exceptional customer support with a fully customizable platform',
+      description: 'SupportHub is our advanced conversational AI platform that provides natural, helpful interactions across text and voice channels to enhance customer support, drive sales, and improve user experience - all with extensive customization options.',
       icon: MessageCircle,
       image: 'https://images.unsplash.com/photo-1579869847514-7c1a19d2d2ad?q=80&w=2534&auto=format&fit=crop',
       features: [
         'Omnichannel support across web, mobile, and voice',
         'Natural language understanding and generation',
+        'Fully customizable to match your brand',
         'Seamless handoff to human agents when needed',
         'Integration with existing CRM and support systems',
         'Multi-language support for global businesses',

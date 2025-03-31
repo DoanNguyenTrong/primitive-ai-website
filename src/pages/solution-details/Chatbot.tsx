@@ -6,7 +6,7 @@ import FeatureCard from '@/components/FeatureCard';
 import PricingCard from '@/components/PricingCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Globe, Clock, BarChart, Headphones, Speech } from 'lucide-react';
+import { MessageCircle, Globe, Clock, BarChart, Headphones, Speech, Palette, Zap, Code } from 'lucide-react';
 
 const Chatbot = () => {
   return (
@@ -16,9 +16,9 @@ const Chatbot = () => {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="hero-heading mb-6">AI Chatbot & Voice Bot Solutions</h1>
+              <h1 className="hero-heading mb-6">SupportHub: AI Chatbot & Voice Bot</h1>
               <p className="text-xl text-gray-300 mb-8">
-                Transform customer support and sales with intelligent conversational AI that delivers natural, helpful interactions across text and voice channels.
+                Transform customer support and sales with our fully customizable intelligent conversational AI platform that delivers natural, helpful interactions across text and voice channels.
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button className="bg-white text-purple-800 hover:bg-gray-100">
@@ -34,7 +34,7 @@ const Chatbot = () => {
               <div className="relative">
                 <img 
                   src="https://images.unsplash.com/photo-1551434678-e076c223a692?q=80&w=2670&auto=format&fit=crop" 
-                  alt="AI Chatbot & Voice Bot" 
+                  alt="SupportHub: AI Chatbot & Voice Bot" 
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>
@@ -48,7 +48,7 @@ const Chatbot = () => {
         <div className="section-container">
           <SectionHeader
             title="Key Features"
-            subtitle="Our AI-powered conversational solutions deliver exceptional customer experiences"
+            subtitle="Our AI-powered SupportHub platform delivers exceptional customer experiences with extensive customization options"
             centered={true}
           />
           
@@ -83,6 +83,21 @@ const Chatbot = () => {
               description="Track performance metrics, conversation quality, and customer satisfaction to continuously improve."
               icon={BarChart}
             />
+            <FeatureCard
+              title="Fully Customizable"
+              description="Tailor the look and feel of your chatbot to match your brand with custom colors, fonts, and interface elements."
+              icon={Palette}
+            />
+            <FeatureCard
+              title="Integration Options"
+              description="Connect SupportHub to your existing CRM, help desk, and other business systems with our robust API."
+              icon={Code}
+            />
+            <FeatureCard
+              title="No-Code Configuration"
+              description="Set up and modify your chatbot flows without technical knowledge using our intuitive drag-and-drop interface."
+              icon={Zap}
+            />
           </div>
         </div>
       </section>
@@ -91,8 +106,8 @@ const Chatbot = () => {
       <section className="py-20 bg-gray-50">
         <div className="section-container">
           <SectionHeader
-            title="How It Works"
-            subtitle="Our AI Chatbot & Voice Bot solutions seamlessly integrate with your existing systems"
+            title="How SupportHub Works"
+            subtitle="Our AI Chatbot & Voice Bot platform seamlessly integrates with your existing systems"
             centered={true}
           />
           
@@ -101,9 +116,9 @@ const Chatbot = () => {
               <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-xl font-bold">1</span>
               </div>
-              <h3 className="text-xl font-semibold mb-4">Training & Setup</h3>
+              <h3 className="text-xl font-semibold mb-4">Customization & Setup</h3>
               <p className="text-muted-foreground">
-                We train the AI on your specific products, services, policies, and customer interactions to ensure accurate and helpful responses.
+                We customize SupportHub for your specific products, services, policies, and customer interactions to ensure accurate and helpful responses.
               </p>
             </div>
             
@@ -113,7 +128,7 @@ const Chatbot = () => {
               </div>
               <h3 className="text-xl font-semibold mb-4">Integration</h3>
               <p className="text-muted-foreground">
-                We integrate the solution with your existing customer support systems, websites, mobile apps, and phone systems.
+                We integrate SupportHub with your existing customer support systems, websites, mobile apps, and phone systems.
               </p>
             </div>
             
@@ -135,7 +150,7 @@ const Chatbot = () => {
         <div className="section-container">
           <SectionHeader
             title="Use Cases"
-            subtitle="Our AI Chatbot & Voice Bot solutions are versatile and applicable across various industries"
+            subtitle="SupportHub is versatile and applicable across various industries"
             centered={true}
           />
           
@@ -216,13 +231,13 @@ const Chatbot = () => {
         <div className="section-container">
           <SectionHeader
             title="What Our Clients Say"
-            subtitle="Hear from businesses that have transformed their customer interactions with our AI Chatbot & Voice Bot solutions"
+            subtitle="Hear from businesses that have transformed their customer interactions with SupportHub"
             centered={true}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
-              quote="Our customer satisfaction scores increased by 35% after implementing Primitive AI's chatbot. The natural conversations and quick responses have been game-changing."
+              quote="Our customer satisfaction scores increased by 35% after implementing SupportHub. The natural conversations, quick responses, and ability to customize it to match our brand have been game-changing."
               author="Sarah Thompson"
               role="Customer Experience Director"
               company="RetailGiant Inc."
@@ -236,7 +251,7 @@ const Chatbot = () => {
               rating={5}
             />
             <TestimonialCard
-              quote="The integration with our existing systems was seamless, and the continuous improvements have made the bot smarter over time. It's like having an expert support agent available 24/7."
+              quote="The integration with our existing systems was seamless, and the continuous improvements have made the bot smarter over time. The customization options let us make it perfectly aligned with our brand voice."
               author="Jennifer Wu"
               role="CTO"
               company="E-Commerce Leaders"
@@ -250,7 +265,7 @@ const Chatbot = () => {
       <section id="pricing" className="py-20">
         <div className="section-container">
           <SectionHeader
-            title="Pricing Plans"
+            title="SupportHub Pricing Plans"
             subtitle="Choose the plan that works best for your business needs"
             centered={true}
           />
@@ -261,8 +276,9 @@ const Chatbot = () => {
               price="$999"
               description="Ideal for small businesses with standard customer support needs"
               features={[
-                "AI Chatbot for website",
+                "SupportHub chatbot for website",
                 "5,000 conversations/month",
+                "Basic customization options",
                 "Basic pre-built templates",
                 "Email support",
                 "Standard analytics",
@@ -275,8 +291,9 @@ const Chatbot = () => {
               description="Perfect for growing companies with multi-channel support requirements"
               features={[
                 "All Basic features",
-                "AI Chatbot & Voice Bot",
+                "SupportHub chatbot & voice bot",
                 "25,000 conversations/month",
+                "Advanced customization options",
                 "Custom training and templates",
                 "CRM integration",
                 "Advanced analytics",
@@ -287,10 +304,11 @@ const Chatbot = () => {
             <PricingCard
               title="Enterprise"
               price="Custom"
-              description="Tailored solution for large organizations with complex support needs"
+              description="Tailored SupportHub solution for large organizations with complex support needs"
               features={[
                 "All Business features",
                 "Unlimited conversations",
+                "Full white-label customization",
                 "Multiple language support",
                 "Custom integrations",
                 "Dedicated account manager",
@@ -317,7 +335,7 @@ const Chatbot = () => {
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Ready to Transform Customer Interactions?</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact us today to schedule a demo and learn how our AI Chatbot & Voice Bot solutions can enhance your customer support and sales operations.
+              Contact us today to schedule a demo and learn how SupportHub can enhance your customer support and sales operations with fully customizable AI conversations.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-white text-purple-800 hover:bg-gray-100">

@@ -17,7 +17,7 @@ import Terms from '@/pages/Terms';
 
 // Solution detail pages
 import CameraAI from '@/pages/solution-details/CameraAI';
-import Chatbot from '@/pages/solution-details/Chatbot';
+import SupportHub from '@/pages/solution-details/Chatbot';
 import LegalHub from '@/pages/solution-details/LegalHub';
 import DocumentProcessing from '@/pages/solution-details/DocumentProcessing';
 
@@ -47,7 +47,7 @@ function App() {
             
             {/* Solution detail routes */}
             <Route path="/solutions/camera-ai" element={<CameraAI />} />
-            <Route path="/solutions/chatbot" element={<Chatbot />} />
+            <Route path="/solutions/chatbot" element={<SupportHub />} />
             <Route path="/solutions/legalhub" element={<LegalHub />} />
             <Route path="/solutions/document-processing" element={<DocumentProcessing />} />
             

@@ -106,7 +106,7 @@ export default {
 				},
 				'bounce-subtle': {
 					'0%, 100%': { transform: 'translateY(0)' },
-					'50%': { transform: 'translateY(-1px)' }
+					'50%': { transform: 'translateY(1px)' },
 				}
 			},
 			animation: {
