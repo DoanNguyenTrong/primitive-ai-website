@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -7,16 +8,10 @@ import { Award, Briefcase, GraduationCap, Users } from 'lucide-react';
 const About = () => {
   const teamMembers = [
     {
-      name: 'Sarah Chen',
-      role: 'CEO & Co-Founder',
-      image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=2676&auto=format&fit=crop',
-      bio: 'Former AI Research Lead at Tech Giant with 15+ years of experience in AI and machine learning. PhD in Computer Science from MIT.'
-    },
-    {
-      name: 'David Rodriguez',
-      role: 'CTO & Co-Founder',
-      image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2574&auto=format&fit=crop',
-      bio: 'Computer vision expert and former lead engineer at Computer Vision Corp. Masters in AI from Stanford University.'
+      name: 'Doan Nguyen',
+      role: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop',
+      bio: 'AI expert with 10+ years of experience. Holds two Master degrees in AI and Robotics from Northern Arizona University and National Chiao Tung University.'
     },
     {
       name: 'Michael Johnson',
@@ -29,43 +24,39 @@ const About = () => {
       role: 'Head of Product',
       image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2574&auto=format&fit=crop',
       bio: 'Product management expert with experience scaling AI products from concept to market leaders. MBA from Harvard Business School.'
+    },
+    {
+      name: 'David Rodriguez',
+      role: 'CTO',
+      image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2574&auto=format&fit=crop',
+      bio: 'Computer vision expert and former lead engineer at Computer Vision Corp. Masters in AI from Stanford University.'
     }
   ];
 
   const milestones = [
     {
-      year: '2018',
+      year: '2023',
       title: 'Company Founded',
       description: 'Primitive AI was established with a mission to make advanced AI accessible to businesses of all sizes.'
     },
     {
-      year: '2019',
+      year: '2023',
       title: 'First Product Launch',
       description: 'Released our first AI-powered document processing solution, gaining our initial enterprise customers.'
     },
     {
-      year: '2020',
-      title: 'Series A Funding',
-      description: 'Secured $10M in Series A funding to expand our product offerings and team.'
-    },
-    {
-      year: '2021',
+      year: '2023',
       title: 'Camera AI Platform',
       description: 'Launched our Camera AI Platform for workplace safety, expanding into the manufacturing and construction sectors.'
     },
     {
-      year: '2022',
+      year: '2023',
       title: 'LegalHub Launch',
       description: 'Released our LegalHub Platform, bringing AI-powered document creation and management to legal teams.'
     },
     {
-      year: '2023',
-      title: 'Series B Funding',
-      description: 'Secured $30M in Series B funding to accelerate growth and international expansion.'
-    },
-    {
       year: '2024',
-      title: 'AI Chatbot Platform',
+      title: 'SupportHub Launch',
       description: 'Launched our advanced LLM-powered chatbot and voice bot solution for customer support and sales.'
     }
   ];
@@ -85,7 +76,7 @@ const About = () => {
                 <Button className="bg-white text-purple-800 hover:bg-gray-100">
                   <Link to="/contact">Get in Touch</Link>
                 </Button>
-                <Button variant="outline" className="text-white border-white hover:bg-white/10">
+                <Button variant="outline" className="text-purple-300 border-purple-300 hover:bg-purple-300/10">
                   <Link to="/why-choose-us">Why Choose Us</Link>
                 </Button>
               </div>
@@ -109,20 +100,20 @@ const About = () => {
         <div className="section-container">
           <SectionHeader
             title="Our Story"
-            subtitle="From a small startup to a leading AI solutions provider"
+            subtitle="From an idea to a leading AI solutions provider"
             centered={true}
           />
           
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg mb-6 text-gray-700">
-                Primitive AI was founded in 2018 by Sarah Chen and David Rodriguez, two AI researchers who saw the potential for artificial intelligence to transform businesses across industries. What began as a small startup focused on intelligent document processing has grown into a comprehensive AI solutions provider serving clients worldwide.
+                Primitive AI was founded in 2023 by Doan Nguyen, an AI expert with extensive experience in artificial intelligence and robotics. What began as a vision has quickly grown into a comprehensive AI solutions provider serving clients worldwide.
               </p>
               <p className="text-lg mb-6 text-gray-700">
-                Our journey began with a simple belief: that advanced AI technology should be accessible to businesses of all sizes. We've since expanded our offerings to include solutions for workplace safety, customer support, legal operations, and document processing—all powered by cutting-edge large language models.
+                Our journey began with a simple belief: that advanced AI technology should be accessible to businesses of all sizes. We've expanded our offerings to include solutions for workplace safety, customer support, legal operations, and document processing—all powered by cutting-edge large language models.
               </p>
               <p className="text-lg text-gray-700">
-                Today, Primitive AI employs over 150 AI specialists, engineers, and industry experts dedicated to developing innovative solutions that drive real business value. Our commitment to excellence, continuous innovation, and customer success remains at the core of everything we do.
+                Today, Primitive AI employs AI specialists, engineers, and industry experts dedicated to developing innovative solutions that drive real business value. Our company is self-funded, allowing us to maintain our vision and focus on customer success without external pressures.
               </p>
             </div>
             <div>
@@ -271,7 +262,7 @@ const About = () => {
               <Button className="bg-white text-purple-800 hover:bg-gray-100">
                 <Link to="/contact">Contact Us</Link>
               </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white/10">
+              <Button variant="outline" className="text-purple-300 border-purple-300 hover:bg-purple-300/10">
                 <Link to="/careers">View Careers</Link>
               </Button>
             </div>

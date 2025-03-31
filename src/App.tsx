@@ -47,7 +47,7 @@ function App() {
             
             {/* Solution detail routes */}
             <Route path="/solutions/camera-ai" element={<CameraAI />} />
-            <Route path="/solutions/chatbot" element={<SupportHub />} />
+            <Route path="/solutions/supportHub" element={<SupportHub />} />
             <Route path="/solutions/legalhub" element={<LegalHub />} />
             <Route path="/solutions/document-processing" element={<DocumentProcessing />} />
             

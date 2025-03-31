@@ -38,25 +38,25 @@ const Footer = () => {
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-purple-300 mt-0.5" />
                 <span className="text-purple-100">
-                  123 Innovation Drive<br />
-                  San Francisco, CA 94105<br />
+                  2261 Market Street STE 22919<br />
+                  San Francisco, CA 94114<br />
                   United States
                 </span>
               </li>
               <li className="flex items-center">
                 <Phone className="h-5 w-5 mr-2 text-purple-300" />
-                <span className="text-purple-100">+1 (555) 123-4567</span>
+                <span className="text-purple-100">+1 (415) 634-3858</span>
               </li>
               <li className="flex items-center">
                 <Mail className="h-5 w-5 mr-2 text-purple-300" />
-                <a href="mailto:info@primitiveai.com" className="text-purple-100 hover:text-white transition-colors">
-                  info@primitiveai.com
+                <a href="mailto:doannt@prai.tech" className="text-purple-100 hover:text-white transition-colors">
+                  doannt@prai.tech
                 </a>
               </li>
               <li className="flex items-center">
                 <ExternalLink className="h-5 w-5 mr-2 text-purple-300" />
-                <a href="https://primitiveai.com" className="text-purple-100 hover:text-white transition-colors">
-                  www.primitiveai.com
+                <a href="https://www.prai.tech" className="text-purple-100 hover:text-white transition-colors">
+                  www.prai.tech
                 </a>
               </li>
             </ul>
@@ -73,7 +73,7 @@ const Footer = () => {
               </li>
               <li>
                 <Link to="/solutions/chatbot" className="text-purple-100 hover:text-white transition-colors block py-1">
-                  AI Chatbot & Voice Bot
+                  SupportHub
                 </Link>
               </li>
               <li>
