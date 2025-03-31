@@ -100,6 +100,11 @@
   .animate-slide-in-up {
     @apply translate-y-10 animate-[slideInUp_0.5s_ease-out_forwards];
   }
+  
+  /* Hook section with purple background */
+  .hook-section {
+    @apply bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20;
+  }
 }
 
 @keyframes fadeIn {
@@ -120,4 +125,10 @@
 @keyframes slideInUp {
   from { transform: translateY(20px); opacity: 0; }
   to { transform: translateY(0); opacity: 1; }
+}
+
+/* Updated bounce-subtle animation to be more gentle */
+@keyframes bounce-subtle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
 }
