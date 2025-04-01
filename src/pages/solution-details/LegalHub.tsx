@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -5,7 +6,7 @@ import FeatureCard from '@/components/FeatureCard';
 import PricingCard from '@/components/PricingCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Link } from 'react-router-dom';
-import { Gavel, FileText, ShieldCheck, History, Zap, Lock, Scale, Search } from 'lucide-react';
+import { FileText, PenTool, Lock, Search, BarChart, CheckSquare } from 'lucide-react';
 
 const LegalHub = () => {
   return (
@@ -17,13 +18,13 @@ const LegalHub = () => {
             <div>
               <h1 className="hero-heading mb-6">LegalHub Platform</h1>
               <p className="text-xl text-gray-300 mb-8">
-                Streamline legal document creation, management, and e-signing with our AI-powered platform that automates routine tasks and ensures compliance.
+                Streamline legal document creation, management, and e-signing with our powerful AI-driven platform designed for legal professionals.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-white text-purple-800 hover:bg-gray-100 transition-all duration-300">
+                <Button className="bg-white text-purple-800 hover:bg-gray-100">
                   <Link to="/contact">Request Demo</Link>
                 </Button>
-                <Button variant="outline" className="border-white text-purple-300 hover:bg-white/10 hover:text-white transition-all duration-300">
+                <Button variant="outline" className="border-white text-purple-300 hover:bg-white/10 hover:text-white">
                   <Link to="#pricing">View Pricing</Link>
                 </Button>
               </div>
@@ -42,77 +43,45 @@ const LegalHub = () => {
         </div>
       </section>
 
-      {/* Demo Image Showcase */}
-      <section className="py-16 bg-gray-50">
-        <div className="section-container">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-800 mb-4">LegalHub in Action</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
-              See how our platform transforms legal document creation and management.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {/* Placeholder for future images */}
-            <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-dashed border-gray-300 h-96 flex items-center justify-center">
-              <p className="text-gray-500 text-center">Document Generation Interface</p>
-            </div>
-            <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-dashed border-gray-300 h-96 flex items-center justify-center">
-              <p className="text-gray-500 text-center">E-Signature Process</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* Key Features Section */}
       <section className="py-20">
         <div className="section-container">
           <SectionHeader
             title="Key Features"
-            subtitle="Our AI-powered LegalHub platform streamlines legal document workflows and ensures compliance"
+            subtitle="Our LegalHub Platform leverages advanced AI to streamline legal operations"
             centered={true}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
-              title="AI Document Generation"
-              description="Create legal documents in minutes using our AI-powered templates and customization options."
+              title="AI Document Creation"
+              description="Generate legal documents quickly using templates and AI assistance tailored to your specific requirements."
               icon={FileText}
             />
             <FeatureCard
-              title="Automated Legal Review"
-              description="Our AI scans documents for potential legal issues and suggests improvements based on best practices."
-              icon={Search}
+              title="Electronic Signatures"
+              description="Securely collect legally binding electronic signatures from all parties with audit trails and verification."
+              icon={PenTool}
             />
             <FeatureCard
-              title="Risk Assessment"
-              description="Identify and mitigate legal risks with our built-in analysis and recommendation system."
-              icon={Scale}
-            />
-            <FeatureCard
-              title="Secure Document Management"
-              description="Store, organize, and control access to all your legal documents in one secure location."
+              title="Secure Document Storage"
+              description="Store and organize all legal documents with enterprise-grade security and compliance features."
               icon={Lock}
             />
             <FeatureCard
-              title="E-Signature Integration"
-              description="Streamline document signing with legally binding electronic signatures that meet regulatory requirements."
-              icon={Gavel}
+              title="Intelligent Search"
+              description="Quickly find specific content within your document repository using AI-powered semantic search."
+              icon={Search}
+            />
+            <FeatureCard
+              title="Comprehensive Analytics"
+              description="Track document status, review cycles, and team performance with detailed analytics and reports."
+              icon={BarChart}
             />
             <FeatureCard
               title="Compliance Monitoring"
-              description="Stay compliant with changing regulations through automatic updates and alerts."
-              icon={ShieldCheck}
-            />
-            <FeatureCard
-              title="Audit Trails"
-              description="Maintain comprehensive records of all document activities for transparency and accountability."
-              icon={History}
-            />
-            <FeatureCard
-              title="Workflow Automation"
-              description="Streamline approval processes and document workflows with customizable automation rules."
-              icon={Zap}
+              description="Ensure documents comply with relevant regulations and internal policies with automated checks."
+              icon={CheckSquare}
             />
           </div>
         </div>

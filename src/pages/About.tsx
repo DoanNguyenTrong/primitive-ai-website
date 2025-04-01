@@ -1,41 +1,63 @@
+
 import React from 'react';
-import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
+import SectionHeader from '@/components/SectionHeader';
 import { Link } from 'react-router-dom';
-import { Rocket, Lightbulb, Users, Code, MessageSquare, CheckCircle } from 'lucide-react';
+import { Award, Briefcase, GraduationCap, Users } from 'lucide-react';
 
 const About = () => {
-  const [activeTab, setActiveTab] = React.useState('our-story');
+  const teamMembers = [
+    {
+      name: 'Doan Nguyen',
+      role: 'Founder & CEO',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop',
+      bio: 'AI expert with 10+ years of experience. Holds two Master degrees in AI and Robotics from Northern Arizona University and National Chiao Tung University.'
+    },
+    {
+      name: 'Michael Johnson',
+      role: 'Chief AI Officer',
+      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop',
+      bio: 'Specializes in natural language processing and LLM applications. Previously led NLP research at AI Research Institute.'
+    },
+    {
+      name: 'Jennifer Williams',
+      role: 'Head of Product',
+      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2574&auto=format&fit=crop',
+      bio: 'Product management expert with experience scaling AI products from concept to market leaders. MBA from Harvard Business School.'
+    },
+    {
+      name: 'David Rodriguez',
+      role: 'CTO',
+      image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2574&auto=format&fit=crop',
+      bio: 'Computer vision expert and former lead engineer at Computer Vision Corp. Masters in AI from Stanford University.'
+    }
+  ];
 
-  const handleTabClick = (tabId: string) => {
-    setActiveTab(tabId);
-  };
-
-  const timelineEvents = [
+  const milestones = [
     {
-      year: "2020",
-      title: "Founding of Primitive AI",
-      description: "Primitive AI was founded by Doan Nguyen with a vision to make AI accessible and practical for businesses of all sizes."
+      year: '2023',
+      title: 'Company Founded',
+      description: 'Primitive AI was established with a mission to make advanced AI accessible to businesses of all sizes.'
     },
     {
-      year: "2021",
-      title: "Product Development",
-      description: "Developed our core AI infrastructure and launched beta versions of our first solutions."
+      year: '2023',
+      title: 'First Product Launch',
+      description: 'Released our first AI-powered document processing solution, gaining our initial enterprise customers.'
     },
     {
-      year: "2022",
-      title: "Market Validation",
-      description: "Successfully deployed our solutions with early adopters, gathered feedback, and refined our offerings."
+      year: '2023',
+      title: 'Camera AI Platform',
+      description: 'Launched our Camera AI Platform for workplace safety, expanding into the manufacturing and construction sectors.'
     },
     {
-      year: "2023",
-      title: "Product Expansion",
-      description: "Expanded our product portfolio with the launch of SupportHub, LegalHub, and Document Processing solutions."
+      year: '2023',
+      title: 'LegalHub Launch',
+      description: 'Released our LegalHub Platform, bringing AI-powered document creation and management to legal teams.'
     },
     {
-      year: "2024",
-      title: "Growth and Innovation",
-      description: "Continued to innovate and expand our customer base, with a focus on enhancing our AI capabilities."
+      year: '2024',
+      title: 'SupportHub Launch',
+      description: 'Launched our advanced LLM-powered chatbot and voice bot solution for customer support and sales.'
     }
   ];
 
@@ -44,222 +66,204 @@ const About = () => {
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20">
         <div className="section-container">
-          <div className="max-w-3xl mx-auto text-center">
-            <h1 className="hero-heading mb-6">About Primitive AI</h1>
-            <p className="text-xl text-gray-300 mb-8">
-              We are a team of passionate AI experts dedicated to providing innovative solutions that drive business growth and efficiency.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="purple" className="shadow-md hover:shadow-lg">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
-              <Button variant="outline" className="border-purple-600 text-purple-300 hover:bg-purple-50">
-                <Link to="/solutions">Explore Our Solutions</Link>
-              </Button>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <h1 className="hero-heading mb-6">About Primitive AI</h1>
+              <p className="text-xl text-gray-300 mb-8">
+                We're on a mission to transform businesses through innovative AI solutions that solve real-world problems.
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button className="bg-white text-purple-800 hover:bg-gray-100">
+                  <Link to="/contact">Get in Touch</Link>
+                </Button>
+                <Button variant="outline" className="text-purple-300 border-purple-300 hover:bg-purple-300/10">
+                  <Link to="/why-choose-us">Why Choose Us</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
+              <div className="relative">
+                <img 
+                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop" 
+                  alt="Primitive AI Team" 
+                  className="rounded-lg shadow-xl w-full"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Tabs Section */}
-      <section className="py-16">
-        <div className="section-container">
-          <div className="flex flex-col md:flex-row gap-8 mb-12">
-            <button
-              className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                activeTab === 'our-story'
-                  ? 'bg-purple-600 text-white hover:bg-purple-700 shadow-md'
-                  : 'bg-purple-50 text-purple-600 hover:bg-purple-100'
-              }`}
-              onClick={() => handleTabClick('our-story')}
-            >
-              Our Story
-            </button>
-            <button
-              className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                activeTab === 'mission-vision'
-                  ? 'bg-purple-600 text-white hover:bg-purple-700 shadow-md'
-                  : 'bg-purple-50 text-purple-600 hover:bg-purple-100'
-              }`}
-              onClick={() => handleTabClick('mission-vision')}
-            >
-              Mission & Vision
-            </button>
-            <button
-              className={`px-6 py-3 rounded-lg font-semibold transition-colors ${
-                activeTab === 'our-team'
-                  ? 'bg-purple-600 text-white hover:bg-purple-700 shadow-md'
-                  : 'bg-purple-50 text-purple-600 hover:bg-purple-100'
-              }`}
-              onClick={() => handleTabClick('our-team')}
-            >
-              Our Team
-            </button>
-          </div>
-
-          {/* Tab Content */}
-          {activeTab === 'our-story' && (
-            <div>
-              <SectionHeader
-                title="Our Story"
-                subtitle="From a vision to reality, discover our journey in making AI accessible for all businesses"
-                centered={true}
-              />
-              <div className="mt-12">
-                <ul className="space-y-12">
-                  {timelineEvents.map((event, index) => (
-                    <li key={index} className="relative">
-                      <div className="flex items-start gap-4">
-                        <div className="w-3 h-3 bg-purple-600 rounded-full mt-2"></div>
-                        <div>
-                          <h3 className="text-xl font-semibold text-gray-800">{event.year}: {event.title}</h3>
-                          <p className="text-gray-600">{event.description}</p>
-                        </div>
-                      </div>
-                      {index < timelineEvents.length - 1 && (
-                        <div className="absolute top-5 left-1.5 h-full border-l border-purple-300"></div>
-                      )}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'mission-vision' && (
-            <div>
-              <SectionHeader
-                title="Our Mission & Vision"
-                subtitle="Empowering businesses with AI solutions that drive growth, efficiency, and innovation"
-                centered={true}
-              />
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-                <div className="bg-purple-50 p-8 rounded-lg shadow-sm">
-                  <div className="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                    <Rocket className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Mission</h3>
-                  <p className="text-gray-600">
-                    To democratize AI by providing accessible, practical, and impactful solutions that enable businesses of all sizes to thrive in the AI-driven era.
-                  </p>
-                </div>
-                <div className="bg-purple-50 p-8 rounded-lg shadow-sm">
-                  <div className="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                    <Lightbulb className="h-6 w-6" />
-                  </div>
-                  <h3 className="text-2xl font-semibold text-gray-800 mb-4">Our Vision</h3>
-                  <p className="text-gray-600">
-                    To be the leading AI solutions provider, recognized for our innovation, customer success, and commitment to ethical AI practices.
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {activeTab === 'our-team' && (
-            <div>
-              <SectionHeader
-                title="Our Team"
-                subtitle="Meet the passionate experts behind Primitive AI"
-                centered={true}
-              />
-              <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <div className="bg-purple-50 p-6 rounded-lg shadow-sm">
-                  <img
-                    src="https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?q=80&w=2680&auto=format&fit=crop"
-                    alt="Team Member 1"
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Doan Nguyen</h3>
-                  <p className="text-gray-600 mb-2">Founder & CEO</p>
-                  <p className="text-gray-500">
-                    Passionate about making AI accessible and impactful for businesses.
-                  </p>
-                </div>
-                <div className="bg-purple-50 p-6 rounded-lg shadow-sm">
-                  <img
-                    src="https://images.unsplash.com/photo-1580489944761-15a19d674308?q=80&w=2561&auto=format&fit=crop"
-                    alt="Team Member 2"
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Alice Johnson</h3>
-                  <p className="text-gray-600 mb-2">Lead AI Scientist</p>
-                  <p className="text-gray-500">
-                    Expert in machine learning and natural language processing.
-                  </p>
-                </div>
-                <div className="bg-purple-50 p-6 rounded-lg shadow-sm">
-                  <img
-                    src="https://images.unsplash.com/photo-1568602471122-78329e14c224?q=80&w=2670&auto=format&fit=crop"
-                    alt="Team Member 3"
-                    className="w-full h-48 object-cover rounded-lg mb-4"
-                  />
-                  <h3 className="text-xl font-semibold text-gray-800 mb-2">Bob Williams</h3>
-                  <p className="text-gray-600 mb-2">Chief Technology Officer</p>
-                  <p className="text-gray-500">
-                    Experienced in building scalable and reliable AI solutions.
-                  </p>
-                </div>
-              </div>
-            </div>
-          )}
-        </div>
-      </section>
-
-      {/* Core Values Section */}
-      <section className="py-20 bg-purple-50">
+      {/* Our Story */}
+      <section className="py-20">
         <div className="section-container">
           <SectionHeader
-            title="Our Core Values"
-            subtitle="Guiding principles that define our culture and drive our success"
+            title="Our Story"
+            subtitle="From an idea to a leading AI solutions provider"
             centered={true}
           />
-          <div className="mt-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <Code className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Innovation</h3>
-              <p className="text-gray-600">
-                We are committed to pushing the boundaries of AI technology and creating innovative solutions that solve real-world problems.
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg mb-6 text-gray-700">
+                Primitive AI was founded in 2023 by Doan Nguyen, an AI expert with extensive experience in artificial intelligence and robotics. What began as a vision has quickly grown into a comprehensive AI solutions provider serving clients worldwide.
+              </p>
+              <p className="text-lg mb-6 text-gray-700">
+                Our journey began with a simple belief: that advanced AI technology should be accessible to businesses of all sizes. We've expanded our offerings to include solutions for workplace safety, customer support, legal operations, and document processing—all powered by cutting-edge large language models.
+              </p>
+              <p className="text-lg text-gray-700">
+                Today, Primitive AI employs AI specialists, engineers, and industry experts dedicated to developing innovative solutions that drive real business value. Our company is self-funded, allowing us to maintain our vision and focus on customer success without external pressures.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <MessageSquare className="h-6 w-6" />
+            <div>
+              <div className="relative rounded-lg overflow-hidden">
+                <img 
+                  src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?q=80&w=2670&auto=format&fit=crop" 
+                  alt="Primitive AI Office" 
+                  className="w-full h-auto rounded-lg shadow-md"
+                />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Customer Success</h3>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Values */}
+      <section className="py-20 bg-gray-50">
+        <div className="section-container">
+          <SectionHeader
+            title="Our Values"
+            subtitle="The principles that guide everything we do"
+            centered={true}
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Users className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Customer First</h3>
               <p className="text-gray-600">
-                We prioritize our customers' success and work closely with them to ensure they achieve their business goals with our AI solutions.
+                We prioritize customer success and build solutions that address real business challenges with measurable results.
               </p>
             </div>
-            <div className="bg-white p-6 rounded-lg shadow-sm">
-              <div className="bg-purple-100 text-purple-600 rounded-full w-12 h-12 flex items-center justify-center mb-4">
-                <CheckCircle className="h-6 w-6" />
+            
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Award className="h-8 w-8" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-800 mb-2">Integrity</h3>
+              <h3 className="text-xl font-bold mb-4">Excellence</h3>
               <p className="text-gray-600">
-                We uphold the highest standards of ethics and integrity in all our interactions, ensuring transparency, honesty, and accountability.
+                We strive for excellence in everything we do, from cutting-edge AI research to customer support and implementation.
               </p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <Briefcase className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Innovation</h3>
+              <p className="text-gray-600">
+                We continuously innovate and push the boundaries of what's possible with AI to deliver transformative solutions.
+              </p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
+              <div className="bg-purple-100 text-purple-600 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-6">
+                <GraduationCap className="h-8 w-8" />
+              </div>
+              <h3 className="text-xl font-bold mb-4">Responsibility</h3>
+              <p className="text-gray-600">
+                We develop and deploy AI responsibly, with a focus on ethics, security, and positive societal impact.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Team */}
+      <section className="py-20">
+        <div className="section-container">
+          <SectionHeader
+            title="Leadership Team"
+            subtitle="Meet the experts driving our mission forward"
+            centered={true}
+          />
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {teamMembers.map((member, index) => (
+              <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
+                <div className="h-64 overflow-hidden">
+                  <img 
+                    src={member.image} 
+                    alt={member.name} 
+                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-1">{member.name}</h3>
+                  <p className="text-purple-600 font-medium mb-4">{member.role}</p>
+                  <p className="text-gray-600">{member.bio}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Company Milestones */}
+      <section className="py-20 bg-gradient-to-br from-purple-50 to-white">
+        <div className="section-container">
+          <SectionHeader
+            title="Our Journey"
+            subtitle="Key milestones in our company's growth"
+            centered={true}
+          />
+          
+          <div className="relative mt-16">
+            {/* Vertical line */}
+            <div className="absolute left-1/2 transform -translate-x-1/2 h-full w-1 bg-purple-300"></div>
+            
+            <div className="space-y-16">
+              {milestones.map((milestone, index) => (
+                <div key={index} className="relative">
+                  <div className="flex items-center justify-center">
+                    <div className="bg-gradient-to-r from-purple-500 to-purple-700 text-white text-center py-3 px-8 rounded-full font-bold z-10 shadow-md hover:shadow-lg transition-shadow duration-300">
+                      {milestone.year}
+                    </div>
+                  </div>
+                  
+                  <div className={`mt-6 grid grid-cols-1 md:grid-cols-2 gap-8 ${index % 2 === 0 ? 'md:text-right' : 'md:text-left'}`}>
+                    <div className={index % 2 === 0 ? 'md:order-1' : 'md:order-2'}>
+                      <div className="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow duration-300 border-l-4 border-purple-500">
+                        <h3 className="text-xl font-bold mb-2 text-gray-800">{milestone.title}</h3>
+                        <p className="text-gray-600">{milestone.description}</p>
+                      </div>
+                    </div>
+                    <div className={index % 2 === 0 ? 'md:order-2' : 'md:order-1'}></div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 hook-section">
+      <section className="py-20 bg-purple-900 text-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
-            <h2 className="section-heading mb-6">Ready to Transform Your Business with AI?</h2>
+            <h2 className="section-heading mb-6">Join Us on Our Mission</h2>
             <p className="text-xl text-gray-300 mb-8">
-              Contact us today to learn how our AI solutions can drive growth, efficiency, and innovation for your business.
+              We're always looking for talented individuals who share our passion for AI and our commitment to excellence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <Button className="bg-white text-purple-800 hover:bg-gray-100">
-                <Link to="/contact">Get Started</Link>
+                <Link to="/contact">Contact Us</Link>
               </Button>
-              <Button variant="outline" className="border-white text-purple-300 hover:bg-white/10">
-                <Link to="/why-choose-us">Why Choose Us</Link>
+              <Button variant="outline" className="text-purple-300 border-purple-300 hover:bg-purple-300/10">
+                <Link to="/careers">View Careers</Link>
               </Button>
             </div>
           </div>
