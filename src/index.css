@@ -127,8 +127,8 @@
   to { transform: translateY(0); opacity: 1; }
 }
 
-/* Updated bounce-subtle animation to be more gentle */
+/* Updated bounce-subtle animation to be more gentle and slower */
 @keyframes bounce-subtle {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-4px); }
+  50% { transform: translateY(-2px); }
 }
