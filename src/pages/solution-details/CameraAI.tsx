@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -6,25 +5,25 @@ import FeatureCard from '@/components/FeatureCard';
 import PricingCard from '@/components/PricingCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Link } from 'react-router-dom';
-import { Camera, Shield, Clock, BarChart, Bell, UserCheck } from 'lucide-react';
+import { Camera, Shield, AlertTriangle, Clock, Users, Bell, Wrench, RefreshCw } from 'lucide-react';
 
 const CameraAI = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20">
+      <section className="hook-section">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="hero-heading mb-6">Camera AI Platform for Workplace Safety</h1>
-              <p className="text-xl text-white mb-8">
-                Enhance workplace safety with intelligent visual monitoring that ensures compliance, prevents accidents, and protects your workforce.
+              <h1 className="hero-heading mb-6">Camera AI Platform</h1>
+              <p className="text-xl text-gray-300 mb-8">
+                Enhance workplace safety with our intelligent visual monitoring system that uses computer vision and deep learning to create safer environments.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-white text-purple-800 hover:bg-gray-100">
+                <Button className="bg-white text-purple-800 hover:bg-gray-100 transition-all duration-300">
                   <Link to="/contact">Request Demo</Link>
                 </Button>
-                <Button variant="outline" className="text-white border-white hover:bg-white/10">
+                <Button variant="outline" className="border-white text-purple-300 hover:bg-white/10 hover:text-white transition-all duration-300">
                   <Link to="#pricing">View Pricing</Link>
                 </Button>
               </div>
@@ -33,11 +32,36 @@ const CameraAI = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=2670&auto=format&fit=crop" 
-                  alt="Camera AI for Workplace Safety" 
+                  src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=2670&auto=format&fit=crop" 
+                  alt="Camera AI Platform" 
                   className="rounded-lg shadow-xl w-full"
                 />
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Visual Demonstration Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="section-container">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Camera AI in Action</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              See how our Camera AI Platform enhances workplace safety through intelligent visual monitoring.
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {/* Placeholder for future images */}
+            <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-dashed border-gray-300 h-64 flex items-center justify-center">
+              <p className="text-gray-500 text-center">PPE Detection Demo</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-dashed border-gray-300 h-64 flex items-center justify-center">
+              <p className="text-gray-500 text-center">Human-Robot Safety Monitoring</p>
+            </div>
+            <div className="bg-white p-4 rounded-lg shadow-sm border-2 border-dashed border-gray-300 h-64 flex items-center justify-center">
+              <p className="text-gray-500 text-center">Abnormal Behavior Detection</p>
             </div>
           </div>
         </div>
@@ -48,40 +72,50 @@ const CameraAI = () => {
         <div className="section-container">
           <SectionHeader
             title="Key Features"
-            subtitle="Our Camera AI Platform leverages computer vision and deep learning to enhance workplace safety"
+            subtitle="Our AI-powered Camera Platform enhances workplace safety with advanced visual monitoring capabilities"
             centered={true}
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <FeatureCard
-              title="Robot-Human Safety"
-              description="Monitor interactions between robots and humans to prevent accidents and ensure safe coworking environments."
+              title="PPE Compliance Detection"
+              description="Automatically detect and enforce proper use of safety equipment including helmets, vests, gloves, and eye protection."
               icon={Shield}
             />
             <FeatureCard
-              title="PPE Compliance"
-              description="Automatically detect whether workers are wearing required protective equipment such as helmets, gloves, and safety vests."
-              icon={UserCheck}
+              title="Human-Robot Safety"
+              description="Monitor interactions between workers and automated equipment to prevent accidents and ensure safe coworking."
+              icon={Users}
             />
             <FeatureCard
-              title="Facial Recognition"
-              description="Secure facility access with facial recognition for check-in/check-out and authorized personnel verification."
-              icon={Camera}
+              title="Abnormal Behavior Detection"
+              description="Identify unusual activities or safety violations that could lead to accidents before they occur."
+              icon={AlertTriangle}
             />
             <FeatureCard
-              title="Behavior Detection"
-              description="Identify abnormal behaviors or movements that may indicate safety risks or security concerns."
-              icon={Bell}
-            />
-            <FeatureCard
-              title="Real-time Alerts"
-              description="Receive instant notifications when safety violations or potential hazards are detected."
+              title="Real-time Monitoring"
+              description="Continuous surveillance and instant alerts for immediate response to potential safety incidents."
               icon={Clock}
             />
             <FeatureCard
-              title="Analytics Dashboard"
-              description="Track safety metrics, identify trends, and generate reports for continuous improvement."
-              icon={BarChart}
+              title="Customizable Alerts"
+              description="Configure notification rules based on your specific safety protocols and organizational needs."
+              icon={Bell}
+            />
+            <FeatureCard
+              title="Configuration Flexibility"
+              description="Easily adapt the system to different environments, equipment types, and safety requirements."
+              icon={Wrench}
+            />
+            <FeatureCard
+              title="Continuous Learning"
+              description="Our AI improves over time, learning from new data to enhance detection accuracy and reduce false alarms."
+              icon={RefreshCw}
+            />
+            <FeatureCard
+              title="Visual Evidence"
+              description="Capture and store visual evidence of safety events for training, compliance, and incident review."
+              icon={Camera}
             />
           </div>
         </div>
