@@ -6,7 +6,11 @@ import FeatureCard from '@/components/FeatureCard';
 import PricingCard from '@/components/PricingCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Link } from 'react-router-dom';
-import { MessageCircle, Globe, Clock, BarChart, Headphones, Speech, Palette, Zap, Code } from 'lucide-react';
+import { 
+  MessageCircle, Globe, Clock, BarChart, Headphones, 
+  Speech, Palette, Zap, Code 
+} from 'lucide-react';
+import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 
 const Chatbot = () => {
   return (
@@ -39,6 +43,105 @@ const Chatbot = () => {
                 />
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Dashboard Preview Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="section-container">
+          <SectionHeader
+            title="SupportHub Dashboard"
+            subtitle="A powerful, intuitive interface for managing customer communications across all channels"
+            centered={true}
+          />
+          
+          <div className="mt-12 space-y-16">
+            {/* Dashboard Overview */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-center">Analytics Dashboard</h3>
+              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
+                <img 
+                  src="/lovable-uploads/46cf1a4f-859d-4c73-9cc8-5fd496e2ae80.png" 
+                  alt="SupportHub Analytics Dashboard" 
+                  className="w-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <p className="text-center mt-4 text-muted-foreground">
+                Get a complete overview of your customer support performance with real-time metrics and visualizations
+              </p>
+            </div>
+            
+            {/* Ticket Management */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-center">Ticket Management</h3>
+              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
+                <img 
+                  src="/lovable-uploads/b8b1f634-740d-46da-a6a7-74b7488fd3d4.png" 
+                  alt="SupportHub Ticket Management" 
+                  className="w-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <p className="text-center mt-4 text-muted-foreground">
+                Efficiently manage support tickets with status tracking, priority flags, and AI-assisted responses
+              </p>
+            </div>
+            
+            {/* Communication Channels */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-center">Multi-Channel Support</h3>
+              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
+                <img 
+                  src="/lovable-uploads/51cfee29-f2f5-45d1-b1bc-6273fb432132.png" 
+                  alt="SupportHub Communication Channels" 
+                  className="w-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <p className="text-center mt-4 text-muted-foreground">
+                Connect with customers across multiple channels - website, email, social media, and more
+              </p>
+            </div>
+            
+            {/* Customer Management */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-center">Customer Management</h3>
+              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
+                <img 
+                  src="/lovable-uploads/33b37c77-db0f-44c7-9281-18a94b010538.png" 
+                  alt="SupportHub Customer Management" 
+                  className="w-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <p className="text-center mt-4 text-muted-foreground">
+                Keep track of all customer interactions and history in one unified interface
+              </p>
+            </div>
+            
+            {/* AI Scenarios */}
+            <div>
+              <h3 className="text-2xl font-semibold mb-6 text-center">AI Scenarios Management</h3>
+              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
+                <img 
+                  src="/lovable-uploads/5f9395b2-7d5f-4b1e-8dab-d966c5fd751f.png" 
+                  alt="SupportHub AI Scenarios" 
+                  className="w-full"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
+              </div>
+              <p className="text-center mt-4 text-muted-foreground">
+                Create and manage AI knowledge base scenarios to automate responses to common customer inquiries
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-16 text-center">
+            <Button variant="purple" className="shadow-lg">
+              <Link to="/contact">Schedule a Live Demo</Link>
+            </Button>
           </div>
         </div>
       </section>

@@ -10,7 +10,7 @@ import CtaSection from './document-processing/CtaSection';
 
 const DocumentProcessing = () => {
   return (
-    <div>
+    <div className="space-y-8">
       <HeroSection />
       <KeyFeatures />
       <HowItWorks />
