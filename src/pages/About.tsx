@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -9,14 +10,14 @@ const About = () => {
     {
       name: 'Doan Nguyen',
       role: 'Founder & CEO',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop',
-      bio: 'AI expert with 10+ years of experience. Holds two Master degrees in AI and Robotics from Northern Arizona University and National Chiao Tung University.'
+      image: '/lovable-uploads/55407f45-cf9e-4e2d-9e86-5e9a6ee68cd1.png',
+      bio: 'Serial Entrepreneur. AI expert with 10+ years of experience. Holds two Master degrees in AI and Robotics from Northern Arizona University and National Chiao Tung University.'
     },
     {
       name: 'Tung Ngo',
       role: 'COO',
       image: '/lovable-uploads/81dd2d8a-b19f-4161-897b-5302091869ae.png',
-      bio: 'Specializes in natural language processing and LLM applications. Previously led NLP research at AI Research Institute.'
+      bio: 'Over 10 years of experience in Finance and Banking with strong expertise in operational management, process optimization, and cross-functional team leadership.'
     },
     {
       name: 'An Nguyen',
