@@ -13,9 +13,9 @@ const About = () => {
       bio: 'AI expert with 10+ years of experience. Holds two Master degrees in AI and Robotics from Northern Arizona University and National Chiao Tung University.'
     },
     {
-      name: 'Michael Johnson',
-      role: 'Chief AI Officer',
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop',
+      name: 'Tung Ngo',
+      role: 'COO',
+      image: '/lovable-uploads/81dd2d8a-b19f-4161-897b-5302091869ae.png',
       bio: 'Specializes in natural language processing and LLM applications. Previously led NLP research at AI Research Institute.'
     },
     {
@@ -23,12 +23,6 @@ const About = () => {
       role: 'CTO',
       image: '/lovable-uploads/a14b1b11-e5a2-4c58-b463-1b03fb04270b.png',
       bio: 'Experienced technology leader with 20+ years in software development and multiple CTO roles. Brings deep expertise across Insurance, Finance, Retail, Logistics, and e-Commerce, with a strong track record of driving innovation and building scalable solutions.'
-    },
-    {
-      name: 'David Rodriguez',
-      role: 'Head of Product',
-      image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2574&auto=format&fit=crop',
-      bio: 'Product management expert with experience scaling AI products from concept to market leaders. MBA from Harvard Business School.'
     }
   ];
 
@@ -190,7 +184,7 @@ const About = () => {
             centered={true}
           />
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {teamMembers.map((member, index) => (
               <div key={index} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
                 <div className="h-64 overflow-hidden">
