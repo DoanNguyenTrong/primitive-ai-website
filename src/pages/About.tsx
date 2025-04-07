@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -20,16 +19,16 @@ const About = () => {
       bio: 'Specializes in natural language processing and LLM applications. Previously led NLP research at AI Research Institute.'
     },
     {
-      name: 'Jennifer Williams',
-      role: 'Head of Product',
-      image: 'https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?q=80&w=2574&auto=format&fit=crop',
-      bio: 'Product management expert with experience scaling AI products from concept to market leaders. MBA from Harvard Business School.'
+      name: 'An Nguyen',
+      role: 'CTO',
+      image: '/lovable-uploads/a14b1b11-e5a2-4c58-b463-1b03fb04270b.png',
+      bio: 'Experienced technology leader with 20+ years in software development and multiple CTO roles. Brings deep expertise across Insurance, Finance, Retail, Logistics, and e-Commerce, with a strong track record of driving innovation and building scalable solutions.'
     },
     {
       name: 'David Rodriguez',
-      role: 'CTO',
+      role: 'Head of Product',
       image: 'https://images.unsplash.com/photo-1566492031773-4f4e44671857?q=80&w=2574&auto=format&fit=crop',
-      bio: 'Computer vision expert and former lead engineer at Computer Vision Corp. Masters in AI from Stanford University.'
+      bio: 'Product management expert with experience scaling AI products from concept to market leaders. MBA from Harvard Business School.'
     }
   ];
 
@@ -85,7 +84,7 @@ const About = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2670&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop" 
                   alt="Primitive AI Team" 
                   className="rounded-lg shadow-xl w-full"
                 />

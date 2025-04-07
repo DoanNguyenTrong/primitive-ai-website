@@ -44,7 +44,7 @@ const Navbar = () => {
       icon: MessageCircle,
     },
     {
-      name: 'LegalHub Platform',
+      name: 'LegalHub: a Cloud solution for legal documents',
       path: '/solutions/legalhub',
       description: 'Streamline legal document creation, management, and e-signing',
       icon: FileText,
