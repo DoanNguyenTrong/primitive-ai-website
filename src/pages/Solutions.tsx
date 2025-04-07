@@ -42,7 +42,7 @@ const Solutions = () => {
     },
     {
       id: 'legalhub',
-      title: 'LegalHub Platform',
+      title: 'LegalHub: a Cloud solution for legal documents',
       subtitle: 'Streamline legal document creation, management, and e-signing',
       description: 'LegalHub leverages AI to automate the creation, review, and management of legal documents with built-in e-signing capabilities, reducing time and costs associated with legal operations.',
       icon: FileText,

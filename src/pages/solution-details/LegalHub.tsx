@@ -16,7 +16,7 @@ const LegalHub = () => {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="hero-heading mb-6">LegalHub Platform</h1>
+              <h1 className="hero-heading mb-6">LegalHub: a Cloud solution for legal documents</h1>
               <p className="text-xl text-gray-300 mb-8">
                 Streamline legal document creation, management, and e-signing with our powerful AI-driven platform designed for legal professionals.
               </p>
@@ -87,8 +87,59 @@ const LegalHub = () => {
         </div>
       </section>
 
-      {/* How It Works */}
+      {/* Platform Screenshots */}
       <section className="py-20 bg-gray-50">
+        <div className="section-container">
+          <SectionHeader
+            title="LegalHub Dashboard"
+            subtitle="Modern, intuitive interface for managing your legal documents"
+            centered={true}
+          />
+          
+          <div className="grid grid-cols-1 gap-8 mt-8">
+            <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+              <img 
+                src="/lovable-uploads/943f3048-80fe-4d3f-84fb-df0de740391c.png" 
+                alt="LegalHub Dashboard" 
+                className="w-full h-auto"
+              />
+              <div className="p-4 bg-white">
+                <h3 className="text-lg font-semibold mb-2 text-center">Dashboard View</h3>
+                <p className="text-gray-600 text-center">Complete overview of your document activity, pending signatures, and recent activity</p>
+              </div>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
+              <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img 
+                  src="/lovable-uploads/74efe076-bdd8-4da0-b32e-a92f68ce896f.png" 
+                  alt="LegalHub Documents View" 
+                  className="w-full h-auto"
+                />
+                <div className="p-4 bg-white">
+                  <h3 className="text-lg font-semibold mb-2 text-center">Documents Management</h3>
+                  <p className="text-gray-600 text-center">Organize and access all your legal documents in one place</p>
+                </div>
+              </div>
+              
+              <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
+                <img 
+                  src="/lovable-uploads/da20ed6c-425e-4f98-8f05-47de3444a629.png" 
+                  alt="LegalHub Templates View" 
+                  className="w-full h-auto"
+                />
+                <div className="p-4 bg-white">
+                  <h3 className="text-lg font-semibold mb-2 text-center">Document Templates</h3>
+                  <p className="text-gray-600 text-center">Access a library of professional templates for various legal needs</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* How It Works */}
+      <section className="py-20">
         <div className="section-container">
           <SectionHeader
             title="How It Works"
@@ -141,7 +192,7 @@ const LegalHub = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-20 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="Use Cases"
@@ -222,7 +273,7 @@ const LegalHub = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20">
         <div className="section-container">
           <SectionHeader
             title="What Our Clients Say"
@@ -257,7 +308,7 @@ const LegalHub = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20">
+      <section id="pricing" className="py-20 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="Pricing Plans"
