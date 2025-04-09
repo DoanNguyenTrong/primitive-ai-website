@@ -1,0 +1,9 @@
+{
+    "apps": [
+        {
+            "name":"prai",
+            "script": "npm",
+            "args": "run preview"
+        }
+    ]
+}

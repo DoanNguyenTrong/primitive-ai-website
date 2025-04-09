@@ -9,6 +9,12 @@ export default defineConfig(({ mode }) => ({
     host: "::",
     port: 8080,
   },
+preview: {
+  port: 4173,
+  strictPort: true,
+  host: '0.0.0.0',
+  allowedHosts: ['www.prai.tech'], // allow all incoming hosts
+},
   plugins: [
     react(),
     mode === 'development' &&
