@@ -154,25 +154,7 @@ const Solutions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-purple-50">
-        <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="section-heading mb-6">Not Sure Which Solution is Right for You?</h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Our team of experts can help you identify the best solutions for your specific business needs. Contact us for a personalized consultation.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button variant="purple" className="shadow-md hover:shadow-lg">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
-              <Button variant="outline" className="border-purple-600 text-purple-600 hover:bg-purple-50">
-                <Link to="/why-choose-us">Why Choose Us</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-      {/* <CTASection/> */}
+      <CTASection />
     </div>
   );
 };
