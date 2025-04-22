@@ -5,7 +5,7 @@ import SectionHeader from '@/components/SectionHeader';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Link } from 'react-router-dom';
 import { Award, Check, Clock, Users } from 'lucide-react';
-import CTASection from '@/components/CTA'
+import CTASection from '@/components/CTA';
 
 const WhyChooseUs = () => {
   return (
@@ -130,26 +130,10 @@ const WhyChooseUs = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-12">
-        <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="section-heading mb-6">Ready to Transform Your Business with AI?</h2>
-            <p className="text-xl text-muted-foreground mb-8">
-              Contact us today to learn how our AI solutions can help you achieve your business goals.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-primitive-600 hover:bg-primitive-700">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
-              <Button variant="outline" className="border-primitive-600 text-primitive-600 hover:bg-primitive-50">
-                <Link to="/solutions">Explore Our Solutions</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
-      <CTASection/>
+      {/* Remove the original inline CTA Section */}
+      
+      {/* Import and use the shared CTASection component */}
+      <CTASection />
     </div>
   );
 };

@@ -1,9 +1,10 @@
+
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Camera, MessageCircle, FileText, Brain } from 'lucide-react';
-import CTASection from '@/components/CTA'
+import CTASection from '@/components/CTA';
 
 const Solutions = () => {
   const solutions = [
@@ -153,7 +154,7 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Remove the unnecessary CTA Section as we're using the imported component */}
       <CTASection />
     </div>
   );
