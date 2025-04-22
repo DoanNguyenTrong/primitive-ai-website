@@ -5,6 +5,7 @@ import SectionHeader from '@/components/SectionHeader';
 import TestimonialCard from '@/components/TestimonialCard';
 import { Link } from 'react-router-dom';
 import { Award, Check, Clock, Users } from 'lucide-react';
+import CTASection from '@/components/CTA'
 
 const WhyChooseUs = () => {
   return (
@@ -22,7 +23,7 @@ const WhyChooseUs = () => {
       </section>
 
       {/* Key Reasons */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="Reasons to Choose Us"
@@ -95,7 +96,7 @@ const WhyChooseUs = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="What Our Clients Say"
@@ -130,7 +131,7 @@ const WhyChooseUs = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Ready to Transform Your Business with AI?</h2>
@@ -148,6 +149,7 @@ const WhyChooseUs = () => {
           </div>
         </div>
       </section>
+      <CTASection/>
     </div>
   );
 };

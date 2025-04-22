@@ -18,12 +18,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => {
   return (
     <div className={cn(
-      "flex flex-col p-6 rounded-xl border bg-card shadow-sm", 
+      "flex flex-col justify-between p-6 rounded-xl border bg-card shadow-sm h-full", 
       "card-hover",
       className
     )}>
-      <div className="h-12 w-12 rounded-lg bg-primitive-100 text-primitive-600 flex items-center justify-center mb-4">
-        <Icon className="h-6 w-6" />
+      <div className="h-12 w-12 mx-auto rounded-xl bg-primitive-100 text-primitive-600 flex items-center justify-center mb-6">
+        <Icon className="h-10 w-10 text-indigo-600" />
       </div>
       <h3 className="text-xl font-semibold mb-2">{title}</h3>
       <p className="text-muted-foreground">{description}</p>

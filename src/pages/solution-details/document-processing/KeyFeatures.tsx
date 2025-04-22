@@ -6,7 +6,7 @@ import { Brain, FileText, Zap, Database, BarChart, Search } from 'lucide-react';
 
 const KeyFeatures = () => {
   return (
-    <section className="py-20">
+    <section className="py-12">
       <div className="section-container">
         <SectionHeader
           title="Key Features"

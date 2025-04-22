@@ -15,7 +15,7 @@ const Footer = () => {
               Transforming industries with advanced AI solutions for workplace safety, 
               customer service, legal operations, and document processing.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex space-x-4 items-center justify-center">
               <a href="#" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
                 <Twitter size={22} />
               </a>
@@ -114,27 +114,24 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-            
-            <h4 className="text-lg font-semibold pt-4 text-white">Legal</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link to="/privacy" className="text-purple-100 hover:text-white transition-colors block py-1">
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link to="/terms" className="text-purple-100 hover:text-white transition-colors block py-1">
-                  Terms of Service
-                </Link>
-              </li>
-            </ul>
           </div>
         </div>
         
-        <div className="border-t border-purple-800 mt-12 pt-8">
-          <p className="text-purple-200 text-center">
-            &copy; {new Date().getFullYear()} Primitive AI. All rights reserved.
-          </p>
+        <div className="border-t border-purple-800 mt-12 pt-6">
+          <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-purple-200 gap-2 sm:gap-4">
+            <p className="text-left">
+              &copy; {new Date().getFullYear()} Primitive AI. All rights reserved.
+            </p>
+            
+            <div className="flex space-x-4">
+              <Link to="/terms" className="text-purple-100 hover:text-white transition-colors">
+                Terms of Service
+              </Link>
+              <Link to="/privacy" className="text-purple-100 hover:text-white transition-colors">
+                Privacy Policy
+              </Link>
+            </div>
+          </div>
         </div>
       </div>
     </footer>

@@ -103,7 +103,7 @@
   
   /* Hook section with purple background */
   .hook-section {
-    @apply bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20;
+    @apply bg-gradient-to-br from-purple-800 via-purple-700 to-purple-900 text-white py-12;
   }
 }
 

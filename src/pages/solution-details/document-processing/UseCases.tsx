@@ -29,7 +29,7 @@ const UseCases = () => {
   ];
 
   return (
-    <section className="py-20">
+    <section className="py-12">
       <div className="section-container">
         <SectionHeader
           title="Use Cases"

@@ -29,7 +29,7 @@ const Testimonials = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <div className="section-container">
         <SectionHeader
           title="What Our Clients Say"

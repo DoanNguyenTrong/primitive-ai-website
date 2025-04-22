@@ -6,6 +6,7 @@ import SectionHeader from '@/components/SectionHeader';
 import FeatureCard from '@/components/FeatureCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import { ArrowRight, Camera, MessageCircle, FileText, Brain, Shield, Zap, BarChart, Users } from 'lucide-react';
+import CTASection from '@/components/CTA'
 
 const Index = () => {
   const observer = useRef<IntersectionObserver | null>(null);
@@ -35,7 +36,7 @@ const Index = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-800 via-purple-700 to-purple-900 text-white py-20 md:py-32 overflow-hidden">
+      <section className="hook-section md:py-32 overflow-hidden">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-8">
@@ -46,10 +47,10 @@ const Index = () => {
                 Primitive AI delivers cutting-edge AI solutions for workplace safety, customer support, legal operations, and document processing.
               </p>
               <div className="flex flex-wrap gap-4 animate-fade-in" style={{animationDelay: '200ms'}}>
-                <Button className="bg-white text-purple-800 hover:bg-gray-100 text-lg px-8 py-6 animate-bounce-subtle">
+                <Button variant="outline" className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white text-lg px-8 py-6 animate-bounce-subtle">
                   <Link to="/solutions">Explore Solutions</Link>
                 </Button>
-                <Button variant="outline" className="text-white border-white hover:bg-white/10 text-lg px-8 py-6">
+                <Button variant="outline" className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white text-lg px-8 py-6 animate-bounce-subtle">
                   <Link to="/contact">Contact Us</Link>
                 </Button>
               </div>
@@ -69,7 +70,7 @@ const Index = () => {
       </section>
 
       {/* Solutions Overview Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="Our AI Solutions"
@@ -120,7 +121,7 @@ const Index = () => {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="Why Choose Primitive AI"
@@ -171,7 +172,7 @@ const Index = () => {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="What Our Clients Say"
@@ -212,7 +213,7 @@ const Index = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-purple-900 text-white">
+      {/* <section className="py-12 bg-purple-900 text-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto animate-on-scroll opacity-0">
             <h2 className="section-heading mb-6">Ready to Transform Your Business?</h2>
@@ -220,10 +221,10 @@ const Index = () => {
               Contact us today to learn how Primitive AI can help your organization harness the power of artificial intelligence.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-purple-800 hover:bg-gray-100 text-lg px-8 py-6 animate-bounce-subtle">
+              <Button variant="outline" className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white text-lg px-8 py-6 animate-bounce-subtle">
                 <Link to="/contact">Get Started</Link>
               </Button>
-              <Button variant="outline" className="text-white border-white hover:bg-white/10 text-lg px-8 py-6">
+              <Button variant="outline" className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white text-lg px-8 py-6 animate-bounce-subtle">
                 <Link to="/solutions">
                   <div className="flex items-center">
                     <Users className="mr-2 h-5 w-5" />
@@ -234,7 +235,8 @@ const Index = () => {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
+      <CTASection/>
     </div>
   );
 };

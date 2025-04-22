@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 
 const PricingSection = () => {
   return (
-    <section id="pricing" className="py-20">
+    <section id="pricing" className="py-12">
       <div className="section-container">
         <SectionHeader
           title="Pricing Plans"

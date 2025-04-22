@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import SectionHeader from '@/components/SectionHeader';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Camera, MessageCircle, FileText, Brain } from 'lucide-react';
+import CTASection from '@/components/CTA'
 
 const Solutions = () => {
   const solutions = [
@@ -76,7 +77,7 @@ const Solutions = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20">
+      <section className="hook-section">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="hero-heading mb-6">AI Solutions for Modern Businesses</h1>
@@ -88,7 +89,7 @@ const Solutions = () => {
       </section>
 
       {/* Solutions List */}
-      <section className="py-20">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="Our AI Solutions"
@@ -153,7 +154,7 @@ const Solutions = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-purple-50">
+      <section className="py-12 bg-purple-50">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Not Sure Which Solution is Right for You?</h2>
@@ -171,6 +172,7 @@ const Solutions = () => {
           </div>
         </div>
       </section>
+      {/* <CTASection/> */}
     </div>
   );
 };

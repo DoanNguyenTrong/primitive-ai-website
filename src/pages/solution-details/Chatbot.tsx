@@ -48,7 +48,7 @@ const Chatbot = () => {
       </section>
 
       {/* Dashboard Preview Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="SupportHub Dashboard"
@@ -147,7 +147,7 @@ const Chatbot = () => {
       </section>
 
       {/* Key Features Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="Key Features"
@@ -206,7 +206,7 @@ const Chatbot = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="How SupportHub Works"
@@ -249,7 +249,7 @@ const Chatbot = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="Use Cases"
@@ -330,7 +330,7 @@ const Chatbot = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="What Our Clients Say"
@@ -365,7 +365,7 @@ const Chatbot = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20">
+      <section id="pricing" className="py-12">
         <div className="section-container">
           <SectionHeader
             title="SupportHub Pricing Plans"
@@ -433,7 +433,7 @@ const Chatbot = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 hook-section">
+      <section className="hook-section">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Ready to Transform Customer Interactions?</h2>

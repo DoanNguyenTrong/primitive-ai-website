@@ -12,7 +12,7 @@ const CameraAI = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20">
+      <section className="hook-section">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -44,7 +44,7 @@ const CameraAI = () => {
       </section>
 
       {/* Key Features Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="Key Features"
@@ -88,7 +88,7 @@ const CameraAI = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="How It Works"
@@ -131,7 +131,7 @@ const CameraAI = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="Use Cases"
@@ -212,7 +212,7 @@ const CameraAI = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="What Our Clients Say"
@@ -247,7 +247,7 @@ const CameraAI = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20">
+      <section id="pricing" className="py-12">
         <div className="section-container">
           <SectionHeader
             title="Pricing Plans"
@@ -312,7 +312,7 @@ const CameraAI = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-purple-900 text-white">
+      <section className="py-12 bg-purple-900 text-white">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Ready to Enhance Workplace Safety?</h2>

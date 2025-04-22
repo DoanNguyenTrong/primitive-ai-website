@@ -27,7 +27,7 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-12 bg-gray-50">
       <div className="section-container">
         <SectionHeader
           title="How It Works"

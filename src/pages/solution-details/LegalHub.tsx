@@ -44,7 +44,7 @@ const LegalHub = () => {
       </section>
 
       {/* Key Features Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="Key Features"
@@ -88,7 +88,7 @@ const LegalHub = () => {
       </section>
 
       {/* Platform Screenshots */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="LegalHub Dashboard"
@@ -139,7 +139,7 @@ const LegalHub = () => {
       </section>
 
       {/* How It Works */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="How It Works"
@@ -192,7 +192,7 @@ const LegalHub = () => {
       </section>
 
       {/* Use Cases */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="Use Cases"
@@ -273,7 +273,7 @@ const LegalHub = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <SectionHeader
             title="What Our Clients Say"
@@ -308,7 +308,7 @@ const LegalHub = () => {
       </section>
 
       {/* Pricing Section */}
-      <section id="pricing" className="py-20 bg-gray-50">
+      <section id="pricing" className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="Pricing Plans"
@@ -373,7 +373,7 @@ const LegalHub = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 hook-section">
+      <section className="hook-section">
         <div className="section-container">
           <div className="text-center max-w-3xl mx-auto">
             <h2 className="section-heading mb-6">Ready to Transform Your Legal Operations?</h2>

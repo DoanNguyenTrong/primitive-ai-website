@@ -64,7 +64,7 @@ const Contact = () => {
   return (
     <div>
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-purple-900 via-purple-800 to-purple-950 text-white py-20">
+      <section className="hook-section">
         <div className="section-container">
           <div className="max-w-3xl mx-auto text-center">
             <h1 className="hero-heading mb-6">Get in Touch</h1>
@@ -76,7 +76,7 @@ const Contact = () => {
       </section>
 
       {/* Contact Form Section */}
-      <section className="py-20">
+      <section className="py-12">
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
             <div>
@@ -278,7 +278,7 @@ const Contact = () => {
       </section>
 
       {/* FAQ Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 bg-gray-50">
         <div className="section-container">
           <SectionHeader
             title="Frequently Asked Questions"
