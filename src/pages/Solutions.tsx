@@ -128,7 +128,7 @@ const Solutions = () => {
                     <p className="mb-6 text-gray-700">{solution.description}</p>
                     
                     <div className="mb-8">
-                      <h3 className="text-lg font-semibold mb-4 text-gray-800">Key Features:</h3>
+                      <h3 className="text-lg font-semibold mb-4 text-gray-800 text-left">Key Features:</h3>
                       <ul className="space-y-2">
                         {solution.features.map((feature, i) => (
                           <li key={i} className="flex items-start">

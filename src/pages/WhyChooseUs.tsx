@@ -4,7 +4,7 @@ import SectionHeader from '@/components/SectionHeader';
 import TestimonialCard from '@/components/TestimonialCard';
 import FeatureCard from '@/components/FeatureCard';
 import { Link } from 'react-router-dom';
-import { Award, Check, Clock, Users } from 'lucide-react';
+import { Award, Check, Clock, Users, Wrench, LifeBuoy } from 'lucide-react';
 import CTASection from '@/components/CTA';
 
 const WhyChooseUs = () => {
@@ -63,14 +63,14 @@ const WhyChooseUs = () => {
             <FeatureCard
               title="Custom Solutions"
               description="We understand that every business is unique. That's why we offer custom AI solutions tailored to your specific needs and goals."
-              icon={Check}
+              icon={Wrench}
               animationDelay={500}
             />
 
             <FeatureCard
               title="Ongoing Support"
               description="We provide ongoing support and maintenance to ensure your AI solutions continue to deliver value over time."
-              icon={Check}
+              icon={LifeBuoy}
               animationDelay={600}
             />
           </div>
