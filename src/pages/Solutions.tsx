@@ -155,7 +155,14 @@ const Solutions = () => {
       </section>
 
       {/* Remove the unnecessary CTA Section as we're using the imported component */}
-      <CTASection />
+       <CTASection 
+        title="Ready to Enhance Workplace Safety?"
+        description="Contact us today to schedule a demo and learn how our Camera AI Platform can protect your workforce and improve compliance."
+        primaryButtonText="Request Demo"
+        secondaryButtonText="Why Choose Us?"
+        primaryButtonLink="/contact"
+        secondaryButtonLink="/why-choose-us"
+      />
     </div>
   );
 };

@@ -28,7 +28,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
     <div className={cn(
       "relative flex flex-col rounded-2xl border bg-card p-6 shadow-sm",
       "transition-all duration-300 hover:shadow-lg",
-      isPopular ? "border-primitive-500 border-2 shadow-md" : ""
+      isPopular ? "border-primitive-500 border-purple-600 border-2 shadow-md" : ""
     )}>
       {isPopular && (
         <div className="absolute -top-4 left-0 right-0 mx-auto w-fit bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
@@ -38,11 +38,11 @@ const PricingCard: React.FC<PricingCardProps> = ({
       
       <div className="mb-5">
         <h3 className="text-xl font-bold">{title}</h3>
+        <p className="mt-2 text-muted-foreground">{description}</p>
         <div className="mt-4 flex items-baseline">
           <span className="text-3xl font-bold">{price}</span>
           {price !== "Custom" && <span className="ml-1 text-muted-foreground">/month</span>}
         </div>
-        <p className="mt-2 text-muted-foreground">{description}</p>
       </div>
       
       <ul className="mb-6 space-y-3 text-sm">
