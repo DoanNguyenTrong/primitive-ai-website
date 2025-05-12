@@ -16,16 +16,16 @@ const Footer = () => {
               customer service, legal operations, and document processing.
             </p>
             <div className="flex space-x-4 items-center justify-center">
-              <a href="#" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
+              {/* <a href="#" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
                 <Twitter size={22} />
-              </a>
-              <a href="#" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
+              </a> */}
+              <a href="https://www.linkedin.com/company/primitiveai" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
                 <Linkedin size={22} />
               </a>
-              <a href="#" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
+              {/* <a href="#" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
                 <Github size={22} />
-              </a>
-              <a href="#" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
+              </a> */}
+              <a href="mailto:doannt@prai.tech" className="text-purple-200 hover:text-white transition-colors hover:scale-110 transform duration-200">
                 <Mail size={22} />
               </a>
             </div>
@@ -37,7 +37,7 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start">
                 <MapPin className="h-5 w-5 mr-2 text-purple-300 mt-0.5" />
-                <span className="text-purple-100">
+                <span className="text-purple-100 text-left">
                   2261 Market Street STE 22919<br />
                   San Francisco, CA 94114<br />
                   United States
