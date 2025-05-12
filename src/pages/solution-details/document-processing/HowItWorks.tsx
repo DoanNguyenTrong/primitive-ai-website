@@ -38,7 +38,7 @@ const HowItWorks = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mt-12">
           {steps.map((step) => (
             <div key={step.number} className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-xl font-bold">{step.number}</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">{step.title}</h3>

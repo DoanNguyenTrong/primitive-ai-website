@@ -181,7 +181,7 @@ const Chatbot = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-xl font-bold">1</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Customization & Setup</h3>
@@ -191,7 +191,7 @@ const Chatbot = () => {
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-xl font-bold">2</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Integration</h3>
@@ -201,7 +201,7 @@ const Chatbot = () => {
             </div>
             
             <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
+              <div className="bg-purple-100 text-purple-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
                 <span className="text-xl font-bold">3</span>
               </div>
               <h3 className="text-xl font-semibold mb-4">Continuous Improvement</h3>
