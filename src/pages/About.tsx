@@ -2,6 +2,7 @@
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
+import CTASection from '@/components/CTA';
 import { Link } from 'react-router-dom';
 import { Award, Briefcase, GraduationCap, Users } from 'lucide-react';
 
@@ -10,48 +11,49 @@ const About = () => {
     {
       name: 'Doan Nguyen',
       role: 'Founder & CEO',
-      image: '/lovable-uploads/55407f45-cf9e-4e2d-9e86-5e9a6ee68cd1.png',
+      image: '/founders/doannt.jpg',
       bio: 'Serial Entrepreneur. AI expert with 10+ years of experience. Holds two Master degrees in AI and Robotics from Northern Arizona University and National Chiao Tung University.'
     },
     {
       name: 'Tung Ngo',
       role: 'COO',
-      image: '/lovable-uploads/81dd2d8a-b19f-4161-897b-5302091869ae.png',
+      image: '/founders/tungnt.png',
       bio: 'Over 10 years of experience in Finance and Banking with strong expertise in operational management, process optimization, and cross-functional team leadership.'
     },
     {
       name: 'An Nguyen',
       role: 'CTO',
-      image: '/lovable-uploads/a14b1b11-e5a2-4c58-b463-1b03fb04270b.png',
+      image: '/founders/ann.png',
       bio: 'Experienced technology leader with 20+ years in software development and multiple CTO roles. Brings deep expertise across Insurance, Finance, Retail, Logistics, and e-Commerce, with a strong track record of driving innovation and building scalable solutions.'
     }
   ];
 
   const milestones = [
     {
-      year: '2023',
+      year: 'Jan - 2020',
       title: 'Company Founded',
       description: 'Primitive AI was established with a mission to make advanced AI accessible to businesses of all sizes.'
     },
     {
-      year: '2023',
-      title: 'First Product Launch',
-      description: 'Released our first AI-powered document processing solution, gaining our initial enterprise customers.'
-    },
-    {
-      year: '2023',
-      title: 'Camera AI Platform',
+      year: 'Aug - 2020',
+      title: 'First Product Launch - VisionHub',
       description: 'Launched our Camera AI Platform for workplace safety, expanding into the manufacturing and construction sectors.'
     },
     {
-      year: '2023',
-      title: 'LegalHub Launch',
-      description: 'Released our LegalHub Platform, bringing AI-powered document creation and management to legal teams.'
-    },
-    {
-      year: '2024',
+      year: 'Jun - 2023',
       title: 'SupportHub Launch',
       description: 'Launched our advanced LLM-powered chatbot and voice bot solution for customer support and sales.'
+    },
+    {
+      year: 'Feb - 2024',
+      title: 'Intelligent Document Processing',
+      description: 'Released our first AI-powered document processing solution, gaining our initial enterprise customers.'
+      
+    },
+    {
+      year: 'Feb - 2025',
+      title: 'LegalHub Launch',
+      description: 'Released our LegalHub Platform, bringing AI-powered document creation and management to companies.'
     }
   ];
 
@@ -101,7 +103,7 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <p className="text-lg mb-6 text-gray-700">
-                Primitive AI was founded in 2023 by Doan Nguyen, an AI expert with extensive experience in artificial intelligence and robotics. What began as a vision has quickly grown into a comprehensive AI solutions provider serving clients worldwide.
+                Primitive AI was founded in 2020 by Doan Nguyen, an AI expert with extensive experience in artificial intelligence and robotics. What began as a vision has quickly grown into a comprehensive AI solutions provider serving clients worldwide.
               </p>
               <p className="text-lg mb-6 text-gray-700">
                 Our journey began with a simple belief: that advanced AI technology should be accessible to businesses of all sizes. We've expanded our offerings to include solutions for workplace safety, customer support, legal operations, and document processing—all powered by cutting-edge large language models.
@@ -245,24 +247,14 @@ const About = () => {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 bg-purple-900 text-white">
-        <div className="section-container">
-          <div className="text-center max-w-3xl mx-auto">
-            <h2 className="section-heading mb-6">Join Us on Our Mission</h2>
-            <p className="text-xl text-gray-300 mb-8">
-              We're always looking for talented individuals who share our passion for AI and our commitment to excellence.
-            </p>
-            <div className="flex flex-wrap justify-center gap-4">
-              <Button className="bg-white text-purple-800 hover:bg-gray-100">
-                <Link to="/contact">Contact Us</Link>
-              </Button>
-              <Button variant="outline" className="text-purple-300 border-purple-300 hover:bg-purple-300/10">
-                <Link to="/careers">View Careers</Link>
-              </Button>
-            </div>
-          </div>
-        </div>
-      </section>
+      <CTASection 
+        title="Join Us on Our Mission"
+        description="We're always looking for talented individuals who share our passion for AI and our commitment to excellence."
+        primaryButtonText="Contact Us"
+        secondaryButtonText="View Careers"
+        primaryButtonLink="/contact"
+        secondaryButtonLink="/"
+      />
     </div>
   );
 };

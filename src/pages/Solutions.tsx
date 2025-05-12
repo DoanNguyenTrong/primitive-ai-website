@@ -11,7 +11,7 @@ const Solutions = () => {
   const solutions = [
     {
       id: 'camera-ai',
-      title: 'Camera AI Platform',
+      title: 'VisionHub: Camera AI Platform',
       subtitle: 'Enhance workplace safety with intelligent visual monitoring',
       description: 'Our Camera AI Platform uses computer vision and deep learning to ensure workplace safety by monitoring human-robot interactions, PPE compliance, facial recognition for secure access, and detecting abnormal behaviors in real-time.',
       icon: Camera,
@@ -44,7 +44,7 @@ const Solutions = () => {
     },
     {
       id: 'legalhub',
-      title: 'LegalHub: a Cloud solution for legal documents',
+      title: 'LegalHub: AI-powered Document Generate and Management',
       subtitle: 'Streamline legal document creation, management, and e-signing',
       description: 'LegalHub leverages AI to automate the creation, review, and management of legal documents with built-in e-signing capabilities, reducing time and costs associated with legal operations.',
       icon: FileText,

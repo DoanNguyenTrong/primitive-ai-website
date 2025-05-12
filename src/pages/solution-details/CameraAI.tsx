@@ -17,7 +17,7 @@ const CameraAI = () => {
         <div className="section-container">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
-              <h1 className="hero-heading mb-6">Camera AI Platform for Workplace Safety</h1>
+              <h1 className="hero-heading mb-6">VisionHub: Camera AI Platform for Workplace Safety</h1>
               <p className="text-xl text-white mb-8">
                 Enhance workplace safety with intelligent visual monitoring that ensures compliance, prevents accidents, and protects your workforce.
               </p>

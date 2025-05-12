@@ -81,21 +81,21 @@ const Index = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             <div className="animate-on-scroll opacity-0">
               <FeatureCard
-                title="Camera AI Platform"
+                title="VisionHub: Camera AI Platform"
                 description="Enhance workplace safety with real-time monitoring for human-robot interaction, PPE compliance, and behavior detection."
                 icon={Camera}
               />
             </div>
             <div className="animate-on-scroll opacity-0" style={{animationDelay: '100ms'}}>
               <FeatureCard
-                title="AI Chatbot & Voice Bot"
+                title="SupportHub: AI Chatbot & Voice Bot"
                 description="Deliver exceptional customer support and sales assistance with natural language understanding and voice interactions."
                 icon={MessageCircle}
               />
             </div>
             <div className="animate-on-scroll opacity-0" style={{animationDelay: '200ms'}}>
               <FeatureCard
-                title="LegalHub Platform"
+                title="LegalHub: AI-powered Document Generate and Management"
                 description="Streamline legal document creation, management, and e-signing with intelligent automation."
                 icon={FileText}
               />

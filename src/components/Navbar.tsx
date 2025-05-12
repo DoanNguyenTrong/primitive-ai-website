@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const solutionsLinks = [
     {
-      name: 'Camera AI Platform',
+      name: 'VisionHub: Camera AI Platform',
       path: '/solutions/camera-ai',
       description: 'Enhance workplace safety with intelligent visual monitoring',
       icon: Camera,
@@ -44,7 +44,7 @@ const Navbar = () => {
       icon: MessageCircle,
     },
     {
-      name: 'LegalHub: a Cloud solution for legal documents',
+      name: 'LegalHub: AI-powered Document Generate and Management',
       path: '/solutions/legalhub',
       description: 'Streamline legal document creation, management, and e-signing',
       icon: FileText,
@@ -117,7 +117,7 @@ const Navbar = () => {
                             <div className="mb-2 mt-4 text-lg font-medium text-purple-600">
                               All Solutions
                             </div>
-                            <p className="text-sm leading-tight text-purple-600">
+                            <p className="text-sm leading-tight">
                               View our complete suite of AI-powered solutions designed to transform your business
                             </p>
                           </Link>
@@ -138,9 +138,9 @@ const Navbar = () => {
                               >
                                 <div className="flex items-center gap-2 text-sm font-medium leading-none mb-1">
                                   <solution.icon className="h-4 w-4 text-purple-600" />
-                                  <span>{solution.name}</span>
+                                  <span className="block text-left">{solution.name}</span>
                                 </div>
-                                <p className="line-clamp-2 text-xs leading-snug text-purple-600">
+                                <p className="line-clamp-2 text-xs leading-snug text-purple-600 text-left">
                                   {solution.description}
                                 </p>
                               </Link>
