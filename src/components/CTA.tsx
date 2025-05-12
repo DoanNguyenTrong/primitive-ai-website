@@ -35,13 +35,13 @@ const CTASection = ({
           <div className="flex flex-wrap justify-center gap-4">
             <Button
               variant="outline"
-              className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white text-lg px-8 py-6"
+              className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white text-lg px-8 py-6 animate-bounce-subtle"
             >
               <Link to={primaryButtonLink}>{primaryButtonText}</Link>
             </Button>
             <Button
               variant="outline"
-              className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white text-lg px-8 py-6"
+              className="bg-white/10 text-white border-transparent hover:bg-white hover:text-purple-800 text-lg px-8 py-6 animate-bounce-subtle"
             >
               <Link to={secondaryButtonLink}>
                 <div className="flex items-center">

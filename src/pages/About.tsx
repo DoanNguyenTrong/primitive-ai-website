@@ -67,10 +67,10 @@ const About = () => {
                 We're on a mission to transform businesses through innovative AI solutions that solve real-world problems.
               </p>
               <div className="flex flex-wrap gap-4">
-                <Button className="bg-white text-purple-800 hover:bg-gray-100">
+                <Button variant="outline" className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white animate-bounce-subtle">
                   <Link to="/contact">Get in Touch</Link>
                 </Button>
-                <Button variant="outline" className="text-purple-300 border-purple-300 hover:bg-purple-300/10">
+                <Button variant="outline" className="bg-white/10 text-white border-transparent hover:bg-white hover:text-purple-800 animate-bounce-subtle">
                   <Link to="/why-choose-us">Why Choose Us</Link>
                 </Button>
               </div>

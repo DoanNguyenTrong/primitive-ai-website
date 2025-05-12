@@ -14,10 +14,10 @@ const HeroSection = () => {
               Transform unstructured documents into structured data with our AI-powered document processing solution.
             </p>
             <div className="flex flex-wrap gap-4">
-              <Button className="bg-white text-purple-800 hover:bg-gray-100">
+              <Button variant="outline" className="bg-white text-purple-800 border-transparent hover:bg-white/10 hover:text-white animate-bounce-subtle">
                 <Link to="/contact">Request Demo</Link>
               </Button>
-              <Button variant="outline" className="text-purple-300 border-white hover:bg-white/10">
+              <Button variant="outline" className="bg-white/10 text-white border-transparent hover:bg-white hover:text-purple-800 animate-bounce-subtle">
                 <Link to="#pricing">View Pricing</Link>
               </Button>
             </div>
