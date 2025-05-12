@@ -422,14 +422,14 @@ const Chatbot = () => {
             />
           </div>
           
-          <div className="mt-12 text-center">
+          {/* <div className="mt-12 text-center">
             <p className="text-muted-foreground mb-4">
               All plans include setup, training, and regular updates.
             </p>
             <Button className="bg-primitive-600 hover:bg-primitive-700">
               <Link to="/contact">Contact Us for Custom Pricing</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 

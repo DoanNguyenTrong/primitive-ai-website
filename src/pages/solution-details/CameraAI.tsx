@@ -307,14 +307,14 @@ const CameraAI = () => {
             />
           </div>
           
-          <div className="mt-12 text-center">
+          {/* <div className="mt-12 text-center">
             <p className="text-gray-700 mb-4">
               All plans include hardware installation, configuration, and training.
             </p>
             <Button className="bg-purple-600 hover:bg-purple-700">
               <Link to="/contact">Contact Us for Custom Pricing</Link>
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
 

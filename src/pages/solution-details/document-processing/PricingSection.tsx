@@ -66,14 +66,14 @@ const PricingSection = () => {
           />
         </div>
         
-        <div className="mt-12 text-center">
+        {/* <div className="mt-12 text-center">
           <p className="text-muted-foreground mb-4">
             All plans include setup, training, and regular updates.
           </p>
           <Button className="bg-purple-600 hover:bg-purple-700">
             <Link to="/contact">Contact Us for Custom Pricing</Link>
           </Button>
-        </div>
+        </div> */}
       </div>
     </section>
   );
