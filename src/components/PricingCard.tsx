@@ -3,6 +3,7 @@ import React from 'react';
 import { Button } from '@/components/ui/button';
 import { Check } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { Link } from 'react-router-dom';
 
 interface PricingCardProps {
   title: string;
@@ -21,16 +22,16 @@ const PricingCard: React.FC<PricingCardProps> = ({
   features,
   isPopular = false,
   ctaText = "Get Started",
-  ctaLink = "#"
+  ctaLink = "/contact"
 }) => {
   return (
     <div className={cn(
       "relative flex flex-col rounded-2xl border bg-card p-6 shadow-sm",
-      "card-hover",
-      isPopular && "border-primitive-500 shadow-md"
+      "transition-all duration-300 hover:shadow-lg",
+      isPopular ? "border-primitive-500 border-2 shadow-md" : ""
     )}>
       {isPopular && (
-        <div className="absolute -top-4 left-0 right-0 mx-auto w-fit bg-primitive-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
+        <div className="absolute -top-4 left-0 right-0 mx-auto w-fit bg-purple-600 text-white px-3 py-1 rounded-full text-xs font-semibold">
           Most Popular
         </div>
       )}
@@ -47,7 +48,7 @@ const PricingCard: React.FC<PricingCardProps> = ({
       <ul className="mb-6 space-y-3 text-sm">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center">
-            <Check className="mr-2 h-4 w-4 text-primitive-600" />
+            <Check className="mr-2 h-4 w-4 text-purple-600" />
             <span>{feature}</span>
           </li>
         ))}
@@ -57,10 +58,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
         <Button 
           className={cn(
             "w-full", 
-            isPopular ? "bg-primitive-600 hover:bg-primitive-700" : "bg-primitive-100 text-primitive-600 hover:bg-primitive-200"
+            isPopular 
+              ? "bg-purple-600 hover:bg-purple-700 text-white" 
+              : "bg-purple-100 text-purple-600 hover:bg-purple-200"
           )}
         >
-          {ctaText}
+          <Link to={ctaLink}>{ctaText}</Link>
         </Button>
       </div>
     </div>

@@ -28,6 +28,8 @@ const PricingSection = () => {
               "Standard integrations",
               "Basic analytics"
             ]}
+            ctaText="Get Started"
+            ctaLink="/contact"
           />
           <PricingCard
             title="Advanced"
@@ -43,6 +45,8 @@ const PricingSection = () => {
               "Advanced analytics"
             ]}
             isPopular={true}
+            ctaText="Get Started"
+            ctaLink="/contact"
           />
           <PricingCard
             title="Enterprise"
@@ -57,6 +61,8 @@ const PricingSection = () => {
               "SLA guarantees",
               "Custom reporting and analytics"
             ]}
+            ctaText="Contact Us"
+            ctaLink="/contact"
           />
         </div>
         
@@ -64,7 +70,7 @@ const PricingSection = () => {
           <p className="text-muted-foreground mb-4">
             All plans include setup, training, and regular updates.
           </p>
-          <Button className="bg-primitive-600 hover:bg-primitive-700">
+          <Button className="bg-purple-600 hover:bg-purple-700">
             <Link to="/contact">Contact Us for Custom Pricing</Link>
           </Button>
         </div>

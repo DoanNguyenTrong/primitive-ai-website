@@ -269,6 +269,8 @@ const CameraAI = () => {
                 "8/5 support",
                 "Weekly safety reports"
               ]}
+              ctaText="Get Started"
+              ctaLink="/contact"
             />
             <PricingCard
               title="Professional"
@@ -284,6 +286,8 @@ const CameraAI = () => {
                 "Daily safety reports"
               ]}
               isPopular={true}
+              ctaText="Get Started"
+              ctaLink="/contact"
             />
             <PricingCard
               title="Enterprise"
@@ -298,6 +302,8 @@ const CameraAI = () => {
                 "Dedicated account manager",
                 "Custom reporting"
               ]}
+              ctaText="Contact Us"
+              ctaLink="/contact"
             />
           </div>
           
@@ -313,7 +319,14 @@ const CameraAI = () => {
       </section>
 
       {/* CTA Section */}
-      <CTASection />
+      <CTASection 
+        title="Ready to Enhance Workplace Safety?"
+        description="Contact us today to schedule a demo and learn how our Camera AI Platform can protect your workforce and improve compliance."
+        primaryButtonText="Request Demo"
+        secondaryButtonText="Explore Other Solutions"
+        primaryButtonLink="/contact"
+        secondaryButtonLink="/solutions"
+      />
     </div>
   );
 };
