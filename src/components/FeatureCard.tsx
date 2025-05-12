@@ -8,20 +8,25 @@ interface FeatureCardProps {
   description: string;
   icon: LucideIcon;
   className?: string;
+  animationDelay?: number;
 }
 
 const FeatureCard: React.FC<FeatureCardProps> = ({ 
   title, 
   description, 
   icon: Icon,
-  className 
+  className,
+  animationDelay = 0
 }) => {
   return (
-    <div className={cn(
-      "flex flex-col justify-between p-6 rounded-xl border bg-card shadow-sm h-full", 
-      "card-hover",
-      className
-    )}>
+    <div 
+      className={cn(
+        "flex flex-col justify-between p-6 rounded-xl border bg-card shadow-sm h-full", 
+        "card-hover animate-fade-in",
+        className
+      )}
+      style={{ animationDelay: `${animationDelay}ms` }}
+    >
       <div className="h-12 w-12 mx-auto rounded-xl bg-primitive-100 text-primitive-600 flex items-center justify-center mb-6">
         <Icon className="h-10 w-10 text-indigo-600" />
       </div>

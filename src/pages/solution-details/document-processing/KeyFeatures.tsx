@@ -19,31 +19,37 @@ const KeyFeatures = () => {
             title="Automated Data Extraction"
             description="Extract data from structured and unstructured documents with high accuracy using advanced OCR and NLP."
             icon={Brain}
+            animationDelay={100}
           />
           <FeatureCard
             title="Document Classification"
             description="Automatically categorize and route documents based on content, type, and purpose."
             icon={FileText}
+            animationDelay={200}
           />
           <FeatureCard
             title="Intelligent Processing"
             description="Process information based on business rules and workflows with minimal human intervention."
             icon={Zap}
+            animationDelay={300}
           />
           <FeatureCard
             title="Data Integration"
             description="Seamlessly integrate extracted data with your existing business systems and databases."
             icon={Database}
+            animationDelay={400}
           />
           <FeatureCard
             title="Advanced Analytics"
             description="Track processing metrics, accuracy rates, and operational efficiency with detailed analytics."
             icon={BarChart}
+            animationDelay={500}
           />
           <FeatureCard
             title="Semantic Search"
             description="Find specific information across your document repository using natural language queries."
             icon={Search}
+            animationDelay={600}
           />
         </div>
       </div>

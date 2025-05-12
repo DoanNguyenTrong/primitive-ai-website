@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -6,10 +5,32 @@ import FeatureCard from '@/components/FeatureCard';
 import PricingCard from '@/components/PricingCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import CTASection from '@/components/CTA';
+import GalleryCarousel from '@/components/GalleryCarousel';
 import { Link } from 'react-router-dom';
 import { FileText, PenTool, Lock, Search, BarChart, CheckSquare } from 'lucide-react';
 
 const LegalHub = () => {
+  const dashboardImages = [
+    {
+      src: "/lovable-uploads/943f3048-80fe-4d3f-84fb-df0de740391c.png",
+      alt: "LegalHub Dashboard",
+      title: "Dashboard View",
+      description: "Complete overview of your document activity, pending signatures, and recent activity"
+    },
+    {
+      src: "/lovable-uploads/74efe076-bdd8-4da0-b32e-a92f68ce896f.png",
+      alt: "LegalHub Documents View",
+      title: "Documents Management",
+      description: "Organize and access all your legal documents in one place"
+    },
+    {
+      src: "/lovable-uploads/da20ed6c-425e-4f98-8f05-47de3444a629.png",
+      alt: "LegalHub Templates View",
+      title: "Document Templates",
+      description: "Access a library of professional templates for various legal needs"
+    }
+  ];
+  
   return (
     <div>
       {/* Hero Section */}
@@ -58,31 +79,37 @@ const LegalHub = () => {
               title="AI Document Creation"
               description="Generate legal documents quickly using templates and AI assistance tailored to your specific requirements."
               icon={FileText}
+              animationDelay={100}
             />
             <FeatureCard
               title="Electronic Signatures"
               description="Securely collect legally binding electronic signatures from all parties with audit trails and verification."
               icon={PenTool}
+              animationDelay={200}
             />
             <FeatureCard
               title="Secure Document Storage"
               description="Store and organize all legal documents with enterprise-grade security and compliance features."
               icon={Lock}
+              animationDelay={300}
             />
             <FeatureCard
               title="Intelligent Search"
               description="Quickly find specific content within your document repository using AI-powered semantic search."
               icon={Search}
+              animationDelay={400}
             />
             <FeatureCard
               title="Comprehensive Analytics"
               description="Track document status, review cycles, and team performance with detailed analytics and reports."
               icon={BarChart}
+              animationDelay={500}
             />
             <FeatureCard
               title="Compliance Monitoring"
               description="Ensure documents comply with relevant regulations and internal policies with automated checks."
               icon={CheckSquare}
+              animationDelay={600}
             />
           </div>
         </div>
@@ -97,44 +124,8 @@ const LegalHub = () => {
             centered={true}
           />
           
-          <div className="grid grid-cols-1 gap-8 mt-8">
-            <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-              <img 
-                src="/lovable-uploads/943f3048-80fe-4d3f-84fb-df0de740391c.png" 
-                alt="LegalHub Dashboard" 
-                className="w-full h-auto"
-              />
-              <div className="p-4 bg-white">
-                <h3 className="text-lg font-semibold mb-2 text-center">Dashboard View</h3>
-                <p className="text-gray-600 text-center">Complete overview of your document activity, pending signatures, and recent activity</p>
-              </div>
-            </div>
-            
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-4">
-              <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                <img 
-                  src="/lovable-uploads/74efe076-bdd8-4da0-b32e-a92f68ce896f.png" 
-                  alt="LegalHub Documents View" 
-                  className="w-full h-auto"
-                />
-                <div className="p-4 bg-white">
-                  <h3 className="text-lg font-semibold mb-2 text-center">Documents Management</h3>
-                  <p className="text-gray-600 text-center">Organize and access all your legal documents in one place</p>
-                </div>
-              </div>
-              
-              <div className="rounded-xl overflow-hidden shadow-lg border border-gray-200">
-                <img 
-                  src="/lovable-uploads/da20ed6c-425e-4f98-8f05-47de3444a629.png" 
-                  alt="LegalHub Templates View" 
-                  className="w-full h-auto"
-                />
-                <div className="p-4 bg-white">
-                  <h3 className="text-lg font-semibold mb-2 text-center">Document Templates</h3>
-                  <p className="text-gray-600 text-center">Access a library of professional templates for various legal needs</p>
-                </div>
-              </div>
-            </div>
+          <div className="mt-8">
+            <GalleryCarousel images={dashboardImages} />
           </div>
         </div>
       </section>

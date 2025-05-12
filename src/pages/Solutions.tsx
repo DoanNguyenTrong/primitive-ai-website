@@ -2,6 +2,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import SectionHeader from '@/components/SectionHeader';
+import FeatureCard from '@/components/FeatureCard';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Camera, MessageCircle, FileText, Brain } from 'lucide-react';
 import CTASection from '@/components/CTA';
@@ -154,10 +155,10 @@ const Solutions = () => {
         </div>
       </section>
 
-      {/* Remove the unnecessary CTA Section as we're using the imported component */}
-       <CTASection 
-        title="Ready to Enhance Workplace Safety?"
-        description="Contact us today to schedule a demo and learn how our Camera AI Platform can protect your workforce and improve compliance."
+      {/* Use the CTASection component */}
+      <CTASection 
+        title="Ready to Enhance Your Business with AI?"
+        description="Contact us today to schedule a demo and learn how our AI solutions can transform your operations."
         primaryButtonText="Request Demo"
         secondaryButtonText="Why Choose Us?"
         primaryButtonLink="/contact"

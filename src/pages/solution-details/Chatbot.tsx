@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
@@ -6,6 +5,7 @@ import FeatureCard from '@/components/FeatureCard';
 import PricingCard from '@/components/PricingCard';
 import TestimonialCard from '@/components/TestimonialCard';
 import CTASection from '@/components/CTA';
+import GalleryCarousel from '@/components/GalleryCarousel';
 import { Link } from 'react-router-dom';
 import { 
   MessageCircle, Globe, Clock, BarChart, Headphones, 
@@ -14,6 +14,39 @@ import {
 import { Table, TableHeader, TableBody, TableRow, TableHead, TableCell } from '@/components/ui/table';
 
 const Chatbot = () => {
+  const dashboardImages = [
+    {
+      src: "/lovable-uploads/46cf1a4f-859d-4c73-9cc8-5fd496e2ae80.png",
+      alt: "SupportHub Analytics Dashboard",
+      title: "Analytics Dashboard",
+      description: "Get a complete overview of your customer support performance with real-time metrics and visualizations"
+    },
+    {
+      src: "/lovable-uploads/b8b1f634-740d-46da-a6a7-74b7488fd3d4.png",
+      alt: "SupportHub Ticket Management",
+      title: "Ticket Management",
+      description: "Efficiently manage support tickets with status tracking, priority flags, and AI-assisted responses"
+    },
+    {
+      src: "/lovable-uploads/51cfee29-f2f5-45d1-b1bc-6273fb432132.png",
+      alt: "SupportHub Communication Channels",
+      title: "Multi-Channel Support",
+      description: "Connect with customers across multiple channels - website, email, social media, and more"
+    },
+    {
+      src: "/lovable-uploads/33b37c77-db0f-44c7-9281-18a94b010538.png",
+      alt: "SupportHub Customer Management",
+      title: "Customer Management",
+      description: "Keep track of all customer interactions and history in one unified interface"
+    },
+    {
+      src: "/lovable-uploads/5f9395b2-7d5f-4b1e-8dab-d966c5fd751f.png",
+      alt: "SupportHub AI Scenarios",
+      title: "AI Scenarios Management",
+      description: "Create and manage AI knowledge base scenarios to automate responses to common customer inquiries"
+    }
+  ];
+
   return (
     <div>
       {/* Hero Section */}
@@ -57,86 +90,8 @@ const Chatbot = () => {
             centered={true}
           />
           
-          <div className="mt-12 space-y-16">
-            {/* Dashboard Overview */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center">Analytics Dashboard</h3>
-              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
-                <img 
-                  src="/lovable-uploads/46cf1a4f-859d-4c73-9cc8-5fd496e2ae80.png" 
-                  alt="SupportHub Analytics Dashboard" 
-                  className="w-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <p className="text-center mt-4 text-muted-foreground">
-                Get a complete overview of your customer support performance with real-time metrics and visualizations
-              </p>
-            </div>
-            
-            {/* Ticket Management */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center">Ticket Management</h3>
-              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
-                <img 
-                  src="/lovable-uploads/b8b1f634-740d-46da-a6a7-74b7488fd3d4.png" 
-                  alt="SupportHub Ticket Management" 
-                  className="w-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <p className="text-center mt-4 text-muted-foreground">
-                Efficiently manage support tickets with status tracking, priority flags, and AI-assisted responses
-              </p>
-            </div>
-            
-            {/* Communication Channels */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center">Multi-Channel Support</h3>
-              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
-                <img 
-                  src="/lovable-uploads/51cfee29-f2f5-45d1-b1bc-6273fb432132.png" 
-                  alt="SupportHub Communication Channels" 
-                  className="w-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <p className="text-center mt-4 text-muted-foreground">
-                Connect with customers across multiple channels - website, email, social media, and more
-              </p>
-            </div>
-            
-            {/* Customer Management */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center">Customer Management</h3>
-              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
-                <img 
-                  src="/lovable-uploads/33b37c77-db0f-44c7-9281-18a94b010538.png" 
-                  alt="SupportHub Customer Management" 
-                  className="w-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <p className="text-center mt-4 text-muted-foreground">
-                Keep track of all customer interactions and history in one unified interface
-              </p>
-            </div>
-            
-            {/* AI Scenarios */}
-            <div>
-              <h3 className="text-2xl font-semibold mb-6 text-center">AI Scenarios Management</h3>
-              <div className="relative rounded-xl overflow-hidden shadow-xl border border-gray-200">
-                <img 
-                  src="/lovable-uploads/5f9395b2-7d5f-4b1e-8dab-d966c5fd751f.png" 
-                  alt="SupportHub AI Scenarios" 
-                  className="w-full"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent opacity-0 hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-              <p className="text-center mt-4 text-muted-foreground">
-                Create and manage AI knowledge base scenarios to automate responses to common customer inquiries
-              </p>
-            </div>
+          <div className="mt-12">
+            <GalleryCarousel images={dashboardImages} />
           </div>
 
           <div className="mt-16 text-center">
@@ -161,46 +116,55 @@ const Chatbot = () => {
               title="Omnichannel Support"
               description="Provide consistent support across web, mobile, social media, and voice channels with a unified conversational experience."
               icon={Globe}
+              animationDelay={100}
             />
             <FeatureCard
               title="Natural Conversations"
               description="Leverage advanced LLMs for human-like conversations that understand context, nuance, and user intent."
               icon={MessageCircle}
+              animationDelay={200}
             />
             <FeatureCard
               title="Voice Interaction"
               description="Enable natural voice interactions with speech recognition and text-to-speech capabilities for phone support."
               icon={Speech}
+              animationDelay={300}
             />
             <FeatureCard
               title="Human Handoff"
               description="Seamlessly transfer complex conversations to human agents with complete context and conversation history."
               icon={Headphones}
+              animationDelay={400}
             />
             <FeatureCard
               title="24/7 Availability"
               description="Provide round-the-clock support to customers regardless of time zone or business hours."
               icon={Clock}
+              animationDelay={500}
             />
             <FeatureCard
               title="Analytics Dashboard"
               description="Track performance metrics, conversation quality, and customer satisfaction to continuously improve."
               icon={BarChart}
+              animationDelay={600}
             />
             <FeatureCard
               title="Fully Customizable"
               description="Tailor the look and feel of your chatbot to match your brand with custom colors, fonts, and interface elements."
               icon={Palette}
+              animationDelay={700}
             />
             <FeatureCard
               title="Integration Options"
               description="Connect SupportHub to your existing CRM, help desk, and other business systems with our robust API."
               icon={Code}
+              animationDelay={800}
             />
             <FeatureCard
               title="No-Code Configuration"
               description="Set up and modify your chatbot flows without technical knowledge using our intuitive drag-and-drop interface."
               icon={Zap}
+              animationDelay={900}
             />
           </div>
         </div>

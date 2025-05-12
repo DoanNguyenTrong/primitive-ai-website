@@ -1,8 +1,8 @@
-
 import React from 'react';
 import { Button } from '@/components/ui/button';
 import SectionHeader from '@/components/SectionHeader';
 import TestimonialCard from '@/components/TestimonialCard';
+import FeatureCard from '@/components/FeatureCard';
 import { Link } from 'react-router-dom';
 import { Award, Check, Clock, Users } from 'lucide-react';
 import CTASection from '@/components/CTA';
@@ -32,65 +32,47 @@ const WhyChooseUs = () => {
           />
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Award className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Innovative Solutions</h3>
-              <p className="text-muted-foreground">
-                We leverage the latest advancements in AI to develop innovative solutions that address your unique challenges.
-              </p>
-            </div>
+            <FeatureCard
+              title="Innovative Solutions"
+              description="We leverage the latest advancements in AI to develop innovative solutions that address your unique challenges."
+              icon={Award}
+              animationDelay={100}
+            />
             
-            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Check className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Proven Results</h3>
-              <p className="text-muted-foreground">
-                Our solutions have a proven track record of delivering measurable results, including increased efficiency, reduced costs, and improved customer satisfaction.
-              </p>
-            </div>
+            <FeatureCard
+              title="Proven Results"
+              description="Our solutions have a proven track record of delivering measurable results, including increased efficiency, reduced costs, and improved customer satisfaction."
+              icon={Check}
+              animationDelay={200}
+            />
             
-            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Clock className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Timely Delivery</h3>
-              <p className="text-muted-foreground">
-                We are committed to delivering projects on time and within budget, without compromising on quality.
-              </p>
-            </div>
+            <FeatureCard
+              title="Timely Delivery"
+              description="We are committed to delivering projects on time and within budget, without compromising on quality."
+              icon={Clock}
+              animationDelay={300}
+            />
             
-            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Users className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Expert Team</h3>
-              <p className="text-muted-foreground">
-                Our team of AI experts has extensive experience in developing and deploying AI solutions across various industries.
-              </p>
-            </div>
+            <FeatureCard
+              title="Expert Team"
+              description="Our team of AI experts has extensive experience in developing and deploying AI solutions across various industries."
+              icon={Users}
+              animationDelay={400}
+            />
 
-            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Check className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Custom Solutions</h3>
-              <p className="text-muted-foreground">
-                We understand that every business is unique. That's why we offer custom AI solutions tailored to your specific needs and goals.
-              </p>
-            </div>
+            <FeatureCard
+              title="Custom Solutions"
+              description="We understand that every business is unique. That's why we offer custom AI solutions tailored to your specific needs and goals."
+              icon={Check}
+              animationDelay={500}
+            />
 
-            <div className="bg-white p-8 rounded-xl shadow-sm text-center">
-              <div className="bg-primitive-100 text-primitive-600 w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-6">
-                <Check className="h-6 w-6" />
-              </div>
-              <h3 className="text-xl font-semibold mb-4">Ongoing Support</h3>
-              <p className="text-muted-foreground">
-                We provide ongoing support and maintenance to ensure your AI solutions continue to deliver value over time.
-              </p>
-            </div>
+            <FeatureCard
+              title="Ongoing Support"
+              description="We provide ongoing support and maintenance to ensure your AI solutions continue to deliver value over time."
+              icon={Check}
+              animationDelay={600}
+            />
           </div>
         </div>
       </section>
@@ -130,8 +112,6 @@ const WhyChooseUs = () => {
         </div>
       </section>
 
-      {/* Remove the original inline CTA Section */}
-      
       {/* Import and use the shared CTASection component */}
       <CTASection />
     </div>
