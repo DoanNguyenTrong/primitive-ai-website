@@ -64,7 +64,12 @@ const Navbar = () => {
           {/* Logo */}
           <div className="flex justify-start lg:w-0 lg:flex-1">
             <Link to="/" className="flex items-center">
-              <span className="text-2xl font-bold text-purple-600">Primitive AI</span>
+              <img 
+                  src="/prai-logo.png" 
+                  alt="Primitive AI" 
+                  className="w-full h-16"
+                />
+              {/* <span className="text-2xl font-bold text-purple-600">Primitive AI</span> */}
             </Link>
           </div>
           
