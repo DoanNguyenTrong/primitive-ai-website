@@ -81,7 +81,7 @@ const About = () => {
               <div className="absolute -inset-0.5 bg-gradient-to-r from-purple-400 to-purple-600 rounded-lg blur opacity-75"></div>
               <div className="relative">
                 <img 
-                  src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=2574&auto=format&fit=crop" 
+                  src="/founders/doannt-body.png" 
                   alt="Primitive AI Team" 
                   className="rounded-lg shadow-xl w-full"
                 />
